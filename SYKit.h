@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Syan. All rights reserved.
 //
 
-#import "UIDevice+SYCategories.h"
-#import "UIScreen+SYCategories.h"
+#import "UIDevice+SYKit.h"
+#import "UIScreen+SYKit.h"
 #import "SYScreenHelper.h"
 #import "CGTools.h"

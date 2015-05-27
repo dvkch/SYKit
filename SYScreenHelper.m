@@ -7,8 +7,8 @@
 //
 
 #import "SYScreenHelper.h"
-#import "UIScreen+SYCategories.h"
-#import "UIDevice+SYCategories.h"
+#import "UIScreen+SYKit.h"
+#import "UIDevice+SYKit.h"
 
 NSString *NSStringFromUIInterfaceOrientation(UIInterfaceOrientation o)
 {
