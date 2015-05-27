@@ -1,4 +1,4 @@
-SYTools
+SYKit
 =======
 
 
@@ -74,6 +74,14 @@ Methods:
 	- (void)updateStatusBarVisibility:(UIInterfaceOrientation)orientation animated:(BOOL)animated;
 	- (CGRect)screenRect:(UIInterfaceOrientation)orientation; // has offset (origin.y != 0) on iOS >= 7
 	- (CGRect)fullScreenRect:(UIInterfaceOrientation)orientation; // ignores status bar
+
+####CGTools
+
+Contains C functions to work with `CGRect`s
+
+	CGRect CGRectCenteredInsideRectWithSize(CGRect inside, CGSize size, BOOL fromOutside);
+	CGRect CGRectCenteredSquarreInsideRectWithSize(CGRect inside, CGFloat size, BOOL fromOutside);
+	CGRect CGRectInsetPercent(CGRect rect, CGFloat percentX, CGFloat percentY);
 
 
 License
