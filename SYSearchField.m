@@ -10,10 +10,10 @@
 #import "UIImage+SYKit.h"
 
 @interface SYSearchField () <UITextFieldDelegate>
-@property (nonatomic, strong) UITextField *textField;
-@property (nonatomic, strong) UIImageView *imageViewIcon;
+@property (nonatomic, strong, readwrite) UITextField *textField;
+@property (nonatomic, strong, readwrite) UIImageView *imageViewIcon;
+@property (nonatomic, strong, readwrite) UIActivityIndicatorView *activityIndicatorView;
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
-@property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
 @property (nonatomic, strong) NSString *lastText;
 @property (nonatomic, assign) BOOL isTyping;
 @end
@@ -46,20 +46,7 @@
     if (self.textField)
         return;
     
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"SYSearchField" ofType:@"bundle"];
-    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
-    
-    // in case we're not using cocoapods
-    if (!bundle)
-        bundle = [NSBundle mainBundle];
-    
-    NSString *loupePath = [bundle pathForResource:@"loupe" ofType:@"png"];
-    UIImage *loupeImg = [[UIImage imageWithContentsOfFile:loupePath] imageResizedSquarreTo:15];
-    
-    loupeImg = [loupeImg imageByAddingPaddingTop:0 left:0 right:10 bottom:2];
-    loupeImg = [loupeImg imageMaskedWithColor:[UIColor lightGrayColor]];
-    
-    self.imageViewIcon = [[UIImageView alloc] initWithImage:loupeImg];
+    self.imageViewIcon = [[UIImageView alloc] init];
     
     self.activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [self.activityIndicatorView setColor:[UIColor darkGrayColor]];
@@ -81,14 +68,21 @@
     [self.textField setLeftViewMode:UITextFieldViewModeUnlessEditing];
     [self addSubview:self.textField];
     
-    [self setBackgroundColor:[UIColor colorWithWhite:222./255. alpha:1.]];
-    [self.layer setCornerRadius:4.];
-    
     self.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureTapped:)];
     [self.tapGesture setNumberOfTapsRequired:1];
     [self.tapGesture setNumberOfTouchesRequired:1];
     [self addGestureRecognizer:self.tapGesture];
     
+    // if we're init-ing from a coder we don't reset settings
+    
+    if (!self.loupeColor)
+        [self setLoupeColor:[UIColor darkGrayColor]];
+    
+    if (!self.backgroundColor)
+        [self setBackgroundColor:[UIColor colorWithWhite:222./255. alpha:1.]];
+
+    [self.layer setCornerRadius:4.];
+
     [self setIsTyping:NO];
 }
 
@@ -98,6 +92,7 @@
         [self.activityIndicatorView startAnimating];
     else
         [self.activityIndicatorView stopAnimating];
+    [self setNeedsLayout];
 }
 
 - (void)setIsTyping:(BOOL)isTyping animated:(BOOL)animated
@@ -127,20 +122,37 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
+    [self.imageViewIcon setFrame:(CGRect){CGPointZero, self.imageViewIcon.image.size}];
+    
     if(self.isTyping)
     {
-        [self.textField setLeftView:self.imageViewIcon];
-        [self.textField setText:[self.displayedURL absoluteString]];
+        NSString *title = self.titleURL ? self.titleURL.absoluteString : self.titleText;
+        [self.textField setLeftView:nil];
+        [self.textField setText:title];
         [self.textField setFrame:CGRectInset(self.bounds, 10, 0)];
     }
     else
     {
-        [self.textField setText:[self.displayedURL host]];
-        [self.textField setLeftView:(self.textField.text.length == 0 ? self.imageViewIcon : self.activityIndicatorView)];
+        NSString *title = self.titleURL ? self.titleURL.host : self.titleText;
+        [self.textField setText:title];
+        
+        // if the spinner is running: show it
+        // if we display the url: show nothing
+        // if we display a specific text (most probably the search query): show the loupe
+        // if there is no text provided (meaning empty search field): show the loupe
+        
+        if (self.activityIndicatorView.isAnimating)
+            [self.textField setLeftView:self.activityIndicatorView];
+        else if (self.textField.text.length == 0 || title == self.titleText)
+            [self.textField setLeftView:self.imageViewIcon];
+        else
+            [self.textField setLeftView:nil];
         
         NSString *str = self.textField.text.length ? self.textField.text : self.textField.placeholder;
         CGFloat w = [str sizeWithAttributes:@{NSFontAttributeName:self.textField.font}].width;
-        w += self.imageViewIcon.image.size.width + 10;
+        
+        if (self.textField.leftView)
+            w += self.activityIndicatorView.bounds.size.width + 10;
         
         CGFloat maxWidth = CGRectGetWidth(self.bounds);
         w = MIN(maxWidth, w);
@@ -150,9 +162,17 @@
 
 #pragma mark - Properties
 
-- (void)setDisplayedURL:(NSURL *)displayedURL
+- (void)setTitleText:(NSString *)titleText
 {
-    self->_displayedURL = displayedURL;
+    self->_titleText = titleText;
+    self->_titleURL = nil;
+    [self setIsTyping:NO animated:NO];
+}
+
+- (void)setTitleURL:(NSURL *)titleURL
+{
+    self->_titleURL = titleURL;
+    self->_titleText = nil;
     [self setIsTyping:NO animated:NO];
 }
 
@@ -164,6 +184,39 @@
 - (NSString *)placeholderText
 {
     return self.textField.placeholder;
+}
+
+- (void)setLoupeColor:(UIColor *)loupeColor
+{
+    self->_loupeColor = loupeColor;
+    [self updateLoupeImage];
+}
+
+- (void)updateLoupeImage
+{
+    NSBundle *mainBundle = [NSBundle mainBundle];
+#ifdef TARGET_IPHONE_SIMULATOR
+    mainBundle = [NSBundle bundleForClass:[self class]];
+#endif
+    
+    NSString *bundlePath = [mainBundle pathForResource:@"SYSearchField" ofType:@"bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    
+    // in case we're not using cocoapods
+    if (!bundle)
+        bundle = mainBundle;
+    
+    NSString *loupePath = [bundle pathForResource:@"loupe" ofType:@"png"];
+    UIImage *loupeImg = [[UIImage imageWithContentsOfFile:loupePath] imageResizedSquarreTo:15];
+    
+    loupeImg = [loupeImg imageByAddingPaddingTop:0 left:8 right:7 bottom:2];
+    loupeImg = [loupeImg imageMaskedWithColor:self.loupeColor];
+    CGFloat a;
+    [self.loupeColor getRed:NULL green:NULL blue:NULL alpha:&a];
+    
+    [self.imageViewIcon setImage:loupeImg];
+    [self.imageViewIcon setAlpha:a];
+    [self setNeedsLayout];
 }
 
 #pragma mark - UITextField

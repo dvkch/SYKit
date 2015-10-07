@@ -14,11 +14,16 @@
 - (void)searchFieldDidReturn:(SYSearchField *)searchField withText:(NSString *)text;
 @end
 
+IB_DESIGNABLE
 @interface SYSearchField : UIView
 
-@property (nonatomic, strong) NSURL *displayedURL;
+@property (nonatomic, strong) NSString *titleText;
+@property (nonatomic, strong) NSURL *titleURL;
 @property (nonatomic, weak) IBOutlet id<SYSearchFieldDelegate> delegate;
-@property (nonatomic) IBInspectable NSString *placeholderText;
+@property (nonatomic, strong, readonly) UITextField *textField;
+@property (nonatomic, strong, readonly) UIImageView *imageViewIcon;
+@property (nonatomic, strong, readonly) UIActivityIndicatorView *activityIndicatorView;
+@property (nonatomic, strong) IBInspectable UIColor *loupeColor;
 
 - (void)showLoadingIndicator:(BOOL)showLoadingIndicator;
 
