@@ -8,5 +8,7 @@
 
 #import "UIDevice+SYKit.h"
 #import "UIScreen+SYKit.h"
+#import "UIImage+SYKit.h"
 #import "SYScreenHelper.h"
+#import "SYSearchField.h"
 #import "CGTools.h"

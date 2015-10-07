@@ -83,6 +83,57 @@ Contains C functions to work with `CGRect`s
 	CGRect CGRectCenteredSquarreInsideRectWithSize(CGRect inside, CGFloat size, BOOL fromOutside);
 	CGRect CGRectInsetPercent(CGRect rect, CGFloat percentX, CGFloat percentY);
 
+####UIImage+SYKit
+
+Some methods to play with images, mainly to create resized copies of images or new images from a plain color
+
+	// convert an image to an iOS6 like bar button image
+	- (UIImage *)imageWithToolbarButtonStyling;
+
+	// mask an image with another color. the image needs to have an alpha channel
+	- (UIImage *)imageMaskedWithColor:(UIColor *)maskColor;
+
+	// create a new 1x1 image with the given color
+	+ (UIImage *)imageWithColor:(UIColor *)color;
+
+	// create a new image with the given color, size and corner radius
+	+ (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size cornerRadius:(CGFloat)cornerRadius;
+
+	// rotate an image with an arbitrary angle
+	- (UIImage *)imageWithAngle:(CGFloat)angle;
+
+	// create a new image from the receiver by adding transparent padding
+	- (UIImage *)imageByAddingPaddingTop:(CGFloat)top
+	                                left:(CGFloat)left
+	                               right:(CGFloat)right
+	                              bottom:(CGFloat)bottom;
+
+	// resize image to new size, without checking if the new image will be distrorted or not
+	- (UIImage *)imageResizedTo:(CGSize)size;
+	
+	// resize image to a new squarre size
+	- (UIImage *)imageResizedSquarreTo:(CGFloat)size;
+	
+	// resize image with correct ascpect to a new height
+	- (UIImage *)imageResizedHeightTo:(CGFloat)height;
+	
+	// resize image with correct ascpect to a new width
+	- (UIImage *)imageResizedWidthTo:(CGFloat)width;
+
+
+####SYSearchBar
+
+Simple reproduction of iOS Safari search/URL bar. There is no simple way to customize this yet, but if you need just ask me and I'll update with some customization methods.
+
+	@interface SYSearchField : UIView
+	
+	@property (nonatomic, strong) NSURL *displayedURL;
+	@property (nonatomic, weak) IBOutlet id<SYSearchFieldDelegate> delegate;
+	
+	- (void)showLoadingIndicator:(BOOL)showLoadingIndicator;
+	
+	@end
+
 
 License
 ===

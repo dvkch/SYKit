@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.ios.deployment_target = '5.0'
   s.name     = 'SYKit'
-  s.version  = '0.0.1'
+  s.version  = '0.0.2'
   s.license  = 'Custom'
   s.summary  = 'UIKit and Foundation tools'
   s.homepage = 'https://github.com/dvkch/SYKit'
@@ -10,4 +10,5 @@ Pod::Spec.new do |s|
   s.source_files = '*.{h,m,c}'
   s.requires_arc = true
   s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES' }
+  s.resource_bundles = { 'SYSearchField' => 'Resources/loupe*.png' }
 end
