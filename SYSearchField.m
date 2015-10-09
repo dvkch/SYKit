@@ -23,25 +23,25 @@
 - (instancetype)init
 {
     self = [super init];
-    if (self) [self customInit];
+    if (self) [self customInitFromCoder:NO];
     return self;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
-    if (self) [self customInit];
+    if (self) [self customInitFromCoder:YES];
     return self;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) [self customInit];
+    if (self) [self customInitFromCoder:NO];
     return self;
 }
 
-- (void)customInit
+- (void)customInitFromCoder:(BOOL)fromCoder
 {
     if (self.textField)
         return;
@@ -74,12 +74,11 @@
     [self addGestureRecognizer:self.tapGesture];
     
     // if we're init-ing from a coder we don't reset settings
-    
-    if (!self.loupeColor)
+    if (!fromCoder)
+    {
         [self setLoupeColor:[UIColor darkGrayColor]];
-    
-    if (!self.backgroundColor)
-        [self setBackgroundColor:[UIColor colorWithWhite:222./255. alpha:1.]];
+        [self setBackgroundColor:[UIColor defaultSYSearchFieldColor]];
+    }
 
     [self.layer setCornerRadius:4.];
 
@@ -259,6 +258,15 @@
 - (BOOL)becomeFirstResponder
 {
     return [self.textField becomeFirstResponder];
+}
+
+@end
+
+@implementation UIColor (SYSearchField)
+
++ (UIColor *)defaultSYSearchFieldColor
+{
+    return [UIColor colorWithWhite:222./255. alpha:1.];
 }
 
 @end
