@@ -9,7 +9,7 @@
 #import "SYSearchField.h"
 #import "UIImage+SYKit.h"
 
-@interface SYSearchField () <UITextFieldDelegate>
+@interface SYSearchField ()
 @property (nonatomic, strong, readwrite) UITextField *textField;
 @property (nonatomic, strong, readwrite) UIImageView *imageViewIcon;
 @property (nonatomic, strong, readwrite) UIActivityIndicatorView *activityIndicatorView;
@@ -23,25 +23,25 @@
 - (instancetype)init
 {
     self = [super init];
-    if (self) [self customInitFromCoder:NO];
+    if (self) [self customInit];
     return self;
 }
 
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
-    if (self) [self customInitFromCoder:YES];
+    if (self) [self customInit];
     return self;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    if (self) [self customInitFromCoder:NO];
+    if (self) [self customInit];
     return self;
 }
 
-- (void)customInitFromCoder:(BOOL)fromCoder
+- (void)customInit
 {
     if (self.textField)
         return;
@@ -74,11 +74,12 @@
     [self addGestureRecognizer:self.tapGesture];
     
     // if we're init-ing from a coder we don't reset settings
-    if (!fromCoder)
-    {
+    
+    if (!self.loupeColor)
         [self setLoupeColor:[UIColor darkGrayColor]];
-        [self setBackgroundColor:[UIColor defaultSYSearchFieldColor]];
-    }
+    
+    if (!self.backgroundColor)
+        [self setBackgroundColor:[UIColor colorWithWhite:222./255. alpha:1.]];
 
     [self.layer setCornerRadius:4.];
 
@@ -152,6 +153,7 @@
         
         if (self.textField.leftView)
             w += self.activityIndicatorView.bounds.size.width + 10;
+        w += [self.textField clearButtonRectForBounds:self.bounds].size.width;
         
         CGFloat maxWidth = CGRectGetWidth(self.bounds);
         w = MIN(maxWidth, w);
@@ -241,6 +243,16 @@
     return YES;
 }
 
+- (BOOL)textFieldShouldClear:(UITextField *)textField
+{
+    [textField setText:nil];
+    self.lastText = nil;
+    if(self.delegate)
+        [self.delegate searchFieldDidReturn:self withText:textField.text];
+    [self.textField resignFirstResponder];
+    return NO;
+}
+
 #pragma mark - UIGestureRecognizer
 
 - (void)tapGestureTapped:(UITapGestureRecognizer *)sender
@@ -258,15 +270,6 @@
 - (BOOL)becomeFirstResponder
 {
     return [self.textField becomeFirstResponder];
-}
-
-@end
-
-@implementation UIColor (SYSearchField)
-
-+ (UIColor *)defaultSYSearchFieldColor
-{
-    return [UIColor colorWithWhite:222./255. alpha:1.];
 }
 
 @end

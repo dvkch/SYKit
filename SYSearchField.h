@@ -15,7 +15,7 @@
 @end
 
 IB_DESIGNABLE
-@interface SYSearchField : UIView
+@interface SYSearchField : UIView <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSString *titleText;
 @property (nonatomic, strong) NSURL *titleURL;
@@ -27,8 +27,4 @@ IB_DESIGNABLE
 
 - (void)showLoadingIndicator:(BOOL)showLoadingIndicator;
 
-@end
-
-@interface UIColor (SYSearchField)
-+ (UIColor *)defaultSYSearchFieldColor;
 @end
