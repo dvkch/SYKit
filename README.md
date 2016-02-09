@@ -157,6 +157,13 @@ Button class to look a bit like material design buttons, ya know the round ones 
 	@interface SYShapeView : UIView
 	
 	@property (nonatomic, readonly, strong) CAShapeLayer *layer;
+	
+	// will use clearColor for the view background and set/get 
+	// backgroundColor will become a proxy to the layer's fillColor
+	// super usefull for UITableViewCell selectedBackgroundView for instance
+	@property (nonatomic, assign) BOOL useBackgroundColorAsFillColor;
+	
+	// will be called right after [super layoutSubviews]
 	@property (nonatomic, copy) void(^layoutSubviewsBlock)(SYShapeView *view);
 	
 	@end
