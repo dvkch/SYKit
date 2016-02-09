@@ -24,4 +24,26 @@
         self.layoutSubviewsBlock(self);
 }
 
+- (void)setBackgroundColor:(UIColor *)backgroundColor
+{
+    if (self.useBackgroundColorAsFillColor)
+    {
+        [super setBackgroundColor:[UIColor clearColor]];
+        self.layer.backgroundColor = backgroundColor.CGColor;
+    }
+    else
+    {
+        [super setBackgroundColor:backgroundColor];
+    }
+}
+
+- (UIColor *)backgroundColor
+{
+    if (self.useBackgroundColorAsFillColor)
+    {
+        return [UIColor colorWithCGColor:self.layer.backgroundColor];
+    }
+    return [super backgroundColor];
+}
+
 @end

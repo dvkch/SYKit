@@ -11,6 +11,7 @@
 @interface SYShapeView : UIView
 
 @property (nonatomic, readonly, strong) CAShapeLayer *layer;
+@property (nonatomic, assign) BOOL useBackgroundColorAsFillColor;
 @property (nonatomic, copy) void(^layoutSubviewsBlock)(SYShapeView *view);
 
 @end
