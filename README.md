@@ -150,6 +150,17 @@ Button class to look a bit like material design buttons, ya know the round ones 
 	
 	@end
 
+####SYShapeView
+
+`UIView` subclass that changes the type of the layer to `CAShapeLayer` and allows you to update the shape's path using its `layoutSubviewsBlock` block.
+
+	@interface SYShapeView : UIView
+	
+	@property (nonatomic, readonly, strong) CAShapeLayer *layer;
+	@property (nonatomic, copy) void(^layoutSubviewsBlock)(SYShapeView *view);
+	
+	@end
+
 
 License
 ===
