@@ -37,7 +37,9 @@
     if (![UIDevice iOSis7Plus] || !ignoreStatusBariOSOver7)
         viewHeight -= statusBarHeight;
     
-    return CGRectMake(0, (ignoreStatusBariOSOver7 ? 0 : statusBarHeight), viewWidth, viewHeight);
+    BOOL noYOffset = ![UIDevice iOSis7Plus] || ignoreStatusBariOSOver7;
+    
+    return CGRectMake(0, (noYOffset ? 0 : statusBarHeight), viewWidth, viewHeight);
 }
 
 @end

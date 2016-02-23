@@ -29,7 +29,7 @@
     if (self.useBackgroundColorAsFillColor)
     {
         [super setBackgroundColor:[UIColor clearColor]];
-        self.layer.backgroundColor = backgroundColor.CGColor;
+        self.layer.fillColor = backgroundColor.CGColor;
     }
     else
     {
