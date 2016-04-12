@@ -23,7 +23,7 @@
     if (configurationBlock)
         configurationBlock(sizingCell);
     
-    [sizingCell setFrame:CGRectMake(0, 0, width, 2000.)];
+    [sizingCell setFrame:CGRectMake(0, 0, width, 8000.)];
     [sizingCell setNeedsUpdateConstraints];
     [sizingCell updateConstraintsIfNeeded];
     [sizingCell setNeedsLayout];
@@ -39,7 +39,7 @@
     [sizingCell.contentView addConstraint:widthConstraint];
     [sizingCell.contentView layoutIfNeeded];
     
-    CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:CGSizeMake(width, CGFLOAT_MAX)];
+    CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:CGSizeMake(width, 8000)];
     [sizingCell.contentView removeConstraint:widthConstraint];
     
     return ceil(size.height);
