@@ -7,6 +7,7 @@
 //
 
 #import "UIImage+SYKit.h"
+#import <ImageIO/ImageIO.h>
 
 @implementation UIImage (SYKit)
 
