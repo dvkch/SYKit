@@ -120,6 +120,9 @@ Some methods to play with images, mainly to create resized copies of images or n
 	// resize image with correct ascpect to a new width
 	- (UIImage *)sy_imageResizedWidthTo:(CGFloat)width;
 
+	// access image size without loading it into memory
+	+ (CGSize)sy_sizeOfImageAtURL:(NSURL *)url
+
 
 ####SYSearchBar
 

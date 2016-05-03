@@ -194,4 +194,27 @@ CGContextRef NYXImageCreateARGBBitmapContext(const size_t width, const size_t he
     return rotated;
 }
 
+// http://oleb.net/blog/2011/09/accessing-image-properties-without-loading-the-image-into-memory/
++ (CGSize)sy_sizeOfImageAtURL:(NSURL *)url
+{
+    CGImageSourceRef imageSource = CGImageSourceCreateWithURL((CFURLRef)url, NULL);
+    
+    if (imageSource == NULL)
+        return CGSizeZero;
+    
+    CGSize imageSize = CGSizeZero;
+    
+    NSDictionary *options = @{(NSString *)kCGImageSourceShouldCache:@(NO)};
+    CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, (CFDictionaryRef)options);
+    if (imageProperties) {
+        NSNumber *width = (NSNumber *)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelWidth);
+        NSNumber *height = (NSNumber *)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelHeight);
+        imageSize = CGSizeMake(width.integerValue, height.integerValue);
+        CFRelease(imageProperties);
+    }
+    
+    CFRelease(imageSource);
+    return imageSize;
+}
+
 @end
