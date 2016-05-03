@@ -32,6 +32,7 @@
     return img;
 }
 
+// http://www.lukaszielinski.de/blog/posts/2014/01/21/ios-how-to-resize-and-rotate-uiimages-in-a-thread-safe-fashion/
 - (UIImage *)sy_imageResizedTo:(CGSize)size
 {
     UIImage *newImage = nil;

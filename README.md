@@ -230,6 +230,7 @@ Could be helpful to determine if a `NSData` is complete or not. For instance whe
 	@interface NSData (SYKit)
 
 	- (BOOL)sy_imageDataIsValidPNG;
+	- (BOOL)sy_imageDataIsValidJPEG;
 
 	@end
 
