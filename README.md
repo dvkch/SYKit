@@ -238,6 +238,22 @@ Could be helpful to determine if a `NSData` is complete or not. For instance whe
 	@end
 
 
+####NSAttributedString+SYKit
+
+Various methods to created new attributed strings, concatenate them, and estimate their size when displayed.
+
+	@interface NSAttributedString (SYKit)
+	
+	+ (NSAttributedString *)sy_stringWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color;
+	+ (NSAttributedString *)sy_stringWithStrings:(NSArray <NSAttributedString *> *)strings;
+	+ (NSAttributedString *)sy_stringWithStrings:(NSArray <NSAttributedString *> *)strings addLineBreak:(BOOL)addLineBreak;
+	
+	- (CGSize)sy_sizeInBoundingSize:(CGSize)size;
+	- (CGSize)sy_sizeInBoundingWidth:(CGFloat)width;
+	
+	@end
+
+
 License
 ===
 
