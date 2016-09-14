@@ -191,11 +191,13 @@ Category on `UIButton` to add some new features.
 
 ####UIView+SYKit
 
-Adds a way to override `pointInside:withEvent:` to "grow" your view touch areas outside of their natural bounds.
-
 	@interface UIView (SYKit)
 	
+	// override `pointInside:withEvent:` to "grow" your view touch areas outside of their natural bounds.
 	@property (nonatomic, assign) UIEdgeInsets sy_tapInsets;
+	
+	// find all subviews of a given class
+	- (NSArray <UIView *> *)sy_findSubviewsOfClass:(Class)class recursive:(BOOL)recursive;
 	
 	@end
 
@@ -251,6 +253,37 @@ Various methods to created new attributed strings, concatenate them, and estimat
 	- (CGSize)sy_sizeInBoundingSize:(CGSize)size;
 	- (CGSize)sy_sizeInBoundingWidth:(CGFloat)width;
 	
+	@end
+
+####NSLayoutConstraint+SYKit
+
+Create autolayout constraints quickly. Definitely not the best option out here, but it prevents the need to have `Masonry` or similar as a dependency of this library.
+
+	@interface NSLayoutConstraint (SYKit)
+	
+	+ (instancetype)sy_equalConstraintWithItems:(NSArray *)items
+	                                  attribute:(NSLayoutAttribute)attribute;
+	
+	+ (instancetype)sy_equalConstraintWithItems:(NSArray *)items
+	                                  attribute:(NSLayoutAttribute)attribute
+	                                     offset:(CGFloat)offset;
+	
+	+ (instancetype)sy_equalConstraintWithItems:(NSArray *)items
+	                                 attribute1:(NSLayoutAttribute)attribute1
+	                                 attribute2:(NSLayoutAttribute)attribute2
+	                                     offset:(CGFloat)offset;
+	
+	+ (instancetype)sy_constraintWithItems:(NSArray *)items
+	                             attribute:(NSLayoutAttribute)attribute
+	                             relatedBy:(NSLayoutRelation)relation
+	                                offset:(CGFloat)offset;
+	
+	+ (instancetype)sy_constraintWithItems:(NSArray *)items
+	                            attribute1:(NSLayoutAttribute)attribute1
+	                            attribute2:(NSLayoutAttribute)attribute2
+	                             relatedBy:(NSLayoutRelation)relation
+	                                offset:(CGFloat)offset;
+
 	@end
 
 
