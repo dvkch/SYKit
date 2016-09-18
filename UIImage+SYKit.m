@@ -38,14 +38,15 @@
 {
     UIImage *newImage = nil;
     
-    CGFloat targetWidth = size.width;
-    CGFloat targetHeight = size.height;
+    CGFloat targetWidth = size.width * self.scale;
+    CGFloat targetHeight = size.height * self.scale;
     
     CGContextRef bitmap = CGBitmapContextCreate(NULL,
                                                 targetWidth,
                                                 targetHeight,
                                                 CGImageGetBitsPerComponent(self.CGImage),
-                                                4 * targetWidth, CGImageGetColorSpace(self.CGImage),
+                                                4 * targetWidth,
+                                                CGImageGetColorSpace(self.CGImage),
                                                 CGImageGetAlphaInfo(self.CGImage));
     
     if (!bitmap)
