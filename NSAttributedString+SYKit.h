@@ -19,7 +19,7 @@
  *
  *  @return New attributed string
  */
-+ (NSAttributedString *)sy_stringWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color;
++ (instancetype)sy_stringWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color;
 
 /**
  *  Concatenates attributes strings into a single one
@@ -28,7 +28,7 @@
  *
  *  @return New attributed string
  */
-+ (NSAttributedString *)sy_stringWithStrings:(NSArray <NSAttributedString *> *)strings;
++ (instancetype)sy_stringWithStrings:(NSArray <NSAttributedString *> *)strings;
 
 /**
  *  Concatenates attributes strings into a single one, with the option to append line breaks between them
@@ -38,7 +38,7 @@
  *
  *  @return New attributed string
  */
-+ (NSAttributedString *)sy_stringWithStrings:(NSArray <NSAttributedString *> *)strings addLineBreak:(BOOL)addLineBreak;
++ (instancetype)sy_stringWithStrings:(NSArray <NSAttributedString *> *)strings addLineBreak:(BOOL)addLineBreak;
 
 /**
  *  Determines the size the receiver would have if constrained to the given size

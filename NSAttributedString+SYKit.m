@@ -10,7 +10,7 @@
 
 @implementation NSAttributedString (SYKit)
 
-+ (NSAttributedString *)sy_stringWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color
++ (instancetype)sy_stringWithText:(NSString *)text font:(UIFont *)font color:(UIColor *)color
 {
     if (!text) return nil;
     
@@ -19,10 +19,10 @@
     if (font)   [attributes setObject:font  forKey:NSFontAttributeName];
     if (color)  [attributes setObject:color forKey:NSForegroundColorAttributeName];
     
-    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
+    return [[self alloc] initWithString:text attributes:attributes];
 }
 
-+ (NSAttributedString *)sy_stringWithStrings:(NSArray<NSAttributedString *> *)strings addLineBreak:(BOOL)addLineBreak
++ (instancetype)sy_stringWithStrings:(NSArray<NSAttributedString *> *)strings addLineBreak:(BOOL)addLineBreak
 {
     if (!strings.count) return nil;
     if (strings.count == 1) return [strings firstObject];
@@ -40,10 +40,10 @@
         }
     }
     
-    return [result copy];
+    return [[self alloc] initWithAttributedString:result];
 }
 
-+ (NSAttributedString *)sy_stringWithStrings:(NSArray<NSAttributedString *> *)strings
++ (instancetype)sy_stringWithStrings:(NSArray<NSAttributedString *> *)strings
 {
     return [self sy_stringWithStrings:strings addLineBreak:NO];
 }
