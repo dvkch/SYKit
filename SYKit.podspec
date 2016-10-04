@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target  = '5.0'
   s.tvos.deployment_target = '9.0'
   s.name     = 'SYKit'
-  s.version  = '0.0.28'
+  s.version  = '0.0.29'
   s.license  = 'Custom'
   s.summary  = 'UIKit and Foundation tools'
   s.homepage = 'https://github.com/dvkch/SYKit'
@@ -12,5 +12,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.xcconfig = { 'CLANG_MODULES_AUTOLINK' => 'YES' }
   s.resource_bundles = { 'SYSearchField' => [ 'Resources/loupe*.png' ] }
-  S.dependency 'JGMethodSwizzler'
+
+  s.dependency 'JGMethodSwizzler'
 end
