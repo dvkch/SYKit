@@ -287,6 +287,32 @@ Create autolayout constraints quickly. Definitely not the best option out here, 
 	@end
 
 
+####UIScrollView+SYKit
+
+Gives the ability to know when the `contentSize` has changed. Tested on `UICollectionView` and `UITextView`.
+
+	@interface UIScrollView (SYKit)
+
+	- (void)sy_setContentSizeChangedBlock:(void(^)(CGSize newSize))block;
+
+	@end
+
+Common use case: keep the size of a `UITextView` or `UICollectionView` equal to its content height.
+
+    [self.collectionView sy_setContentSizeChangedBlock:^(CGSize newSize) {
+        [self.collectionViewHeightConstraint setConstant:newSize.height];
+    }];
+
+
+	// Because the reported contentSize's height is wrong we compute it
+	// ourself using NSAtttributedString+SYKit methods
+	
+    [self.labelDetails sy_setContentSizeChangedBlock:^(CGSize newSize) {
+        [self.labelDetailsHeightConstraint setConstant:
+         [self.labelDetails.attributedText sy_sizeInBoundingWidth:newSize.width].height];
+    }];
+
+
 License
 ===
 
