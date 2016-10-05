@@ -41,6 +41,16 @@
 + (instancetype)sy_stringWithStrings:(NSArray <NSAttributedString *> *)strings addLineBreak:(BOOL)addLineBreak;
 
 /**
+ *  Creates an attributed string with the given image
+ *
+ *  @param image            image for new string
+ *  @param verticalOffset   vertical offset for image
+ *
+ *  @return New attributed string
+ */
++ (NSAttributedString *)sy_stringWithImage:(UIImage *)image verticalOffset:(CGFloat)verticalOffset;
+
+/**
  *  Determines the size the receiver would have if constrained to the given size
  *
  *  @param size bounding size

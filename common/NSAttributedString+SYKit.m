@@ -48,6 +48,14 @@
     return [self sy_stringWithStrings:strings addLineBreak:NO];
 }
 
++ (NSAttributedString *)sy_stringWithImage:(UIImage *)image verticalOffset:(CGFloat)verticalOffset
+{
+    NSTextAttachment *attachment = [[NSTextAttachment alloc] init];
+    [attachment setImage:image];
+    [attachment setBounds:CGRectMake(0, -verticalOffset, image.size.width, image.size.height)];
+    return [self attributedStringWithAttachment:attachment];
+}
+
 static UILabel *SYKit_NSAttributedString_sizingLabel;
 
 - (CGSize)sy_sizeInBoundingSize:(CGSize)size
