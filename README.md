@@ -240,6 +240,20 @@ Could be helpful to determine if a `NSData` is complete or not. For instance whe
 	@end
 
 
+####NSString+SYKit
+
+	@interface NSString (SYKit)
+	
+	/**
+	 *  Returns a string without the white and new line characters at beginning and ending
+	 *
+	 *  @return Trimmed string
+	 */
+	- (instancetype)sy_stringByTrimmingWhiteCharacters;
+	
+	@end
+
+
 ####NSAttributedString+SYKit
 
 Various methods to created new attributed strings, concatenate them, and estimate their size when displayed.
@@ -311,7 +325,6 @@ Common use case: keep the size of a `UITextView` or `UICollectionView` equal to 
         [self.labelDetailsHeightConstraint setConstant:
          [self.labelDetails.attributedText sy_sizeInBoundingWidth:newSize.width].height];
     }];
-
 
 License
 ===
