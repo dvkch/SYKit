@@ -71,7 +71,7 @@
 @end
 
 
-@interface NSMutableString (SYKit)
+@interface NSMutableAttributedString (SYKit)
 
 /**
  *  Appends the given attributed string
