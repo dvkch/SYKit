@@ -8,18 +8,26 @@
 
 import UIKit
 
-extension UITableView {
+public extension UITableView {
 
-    func registerCell(name: String) {
-        register(UINib(nibName: name, bundle: nil), forCellReuseIdentifier: name)
+    func registerCell<T: UITableViewCell>(_ type: T.Type, xib: Bool = true) {
+        let className = NSStringFromClass(type).components(separatedBy: ".").last!
+        if xib {
+            register(UINib(nibName: className, bundle: nil), forCellReuseIdentifier: className)
+        }
+        else {
+            register(type, forCellReuseIdentifier: className)
+        }
     }
     
-    func registerCell(class cellClass: AnyClass) {
-        register(cellClass, forCellReuseIdentifier: String(describing: cellClass))
-    }
-    
-    func registerHeaderClass(_ headerclass: AnyClass) {
-        register(headerclass, forHeaderFooterViewReuseIdentifier: String(describing: headerclass))
+    func registerHeader<T: UITableViewHeaderFooterView>(_ type: T.Type, xib: Bool = true) {
+        let className = NSStringFromClass(type).components(separatedBy: ".").last!
+        if xib {
+            register(UINib(nibName: className, bundle: nil), forHeaderFooterViewReuseIdentifier: className)
+        }
+        else {
+            register(type, forHeaderFooterViewReuseIdentifier: className)
+        }
     }
     
     func dequeueCell(style: UITableViewCell.CellStyle) -> UITableViewCell {
@@ -28,6 +36,12 @@ extension UITableView {
     }
     
     func dequeueCell<T: UITableViewCell>(_ type: T.Type, for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withIdentifier: NSStringFromClass(T.self), for: indexPath) as! T
+        let className = NSStringFromClass(type).components(separatedBy: ".").last!
+        return dequeueReusableCell(withIdentifier: className, for: indexPath) as! T
+    }
+    
+    func dequeueHeader<T: UITableViewHeaderFooterView>(_ type: T.Type) -> T {
+        let className = NSStringFromClass(type).components(separatedBy: ".").last!
+        return dequeueReusableHeaderFooterView(withIdentifier: className) as! T
     }
 }

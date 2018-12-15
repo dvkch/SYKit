@@ -8,16 +8,34 @@
 
 import UIKit
 
-extension UICollectionView {
-    func registerCell(name: String) {
-        register(UINib(nibName: name, bundle: nil), forCellWithReuseIdentifier: name)
+public extension UICollectionView {
+    func registerCell<T: UITableViewCell>(_ type: T.Type, xib: Bool = true) {
+        let className = NSStringFromClass(type).components(separatedBy: ".").last!
+        if xib {
+            register(UINib(nibName: className, bundle: nil), forCellWithReuseIdentifier: className)
+        }
+        else {
+            register(type, forCellWithReuseIdentifier: className)
+        }
     }
     
-    func registerCell(class cellClass: AnyClass) {
-        register(cellClass, forCellWithReuseIdentifier: String(describing: cellClass))
+    func registerSupplementaryView<T: UICollectionReusableView>(_ type: T.Type, kind: String, xib: Bool = true) {
+        let className = NSStringFromClass(type).components(separatedBy: ".").last!
+        if xib {
+            register(UINib(nibName: className, bundle: nil), forSupplementaryViewOfKind: kind, withReuseIdentifier: className)
+        }
+        else {
+            register(type, forSupplementaryViewOfKind: kind, withReuseIdentifier: className)
+        }
     }
     
     func dequeueCell<T: UICollectionViewCell>(_ type: T.Type, for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withReuseIdentifier: NSStringFromClass(T.self), for: indexPath) as! T
+        let className = NSStringFromClass(type).components(separatedBy: ".").last!
+        return dequeueReusableCell(withReuseIdentifier: className, for: indexPath) as! T
+    }
+    
+    func dequeueSupplementaryView<T: UICollectionReusableView>(_ type: T.Type, kind: String, for indexPath: IndexPath) -> T {
+        let className = NSStringFromClass(type).components(separatedBy: ".").last!
+        return dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: className, for: indexPath) as! T
     }
 }
