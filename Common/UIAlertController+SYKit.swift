@@ -27,6 +27,7 @@ extension UIAlertController {
     public func setupImageView(image: UIImage?, height: CGFloat, margins: UIEdgeInsets = .zero) -> UIImageView {
         let vc = SYImageViewController()
         vc.imageView.image = image
+        vc.imageViewMargins = margins
         setContentViewController(vc, height: height)
         return vc.imageView
     }
@@ -40,17 +41,31 @@ fileprivate class SYImageViewController : UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageView)
         
-        topConstraint = imageView.topAnchor.constraint(equalTo: view.topAnchor)
-        leftConstraint = imageView.leftAnchor.constraint(equalTo: view.leftAnchor)
-        rightConstraint = imageView.rightAnchor.constraint(equalTo: view.rightAnchor)
-        bottomConstraint = imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        topConstraint = NSLayoutConstraint(item: imageView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0)
+        leftConstraint = NSLayoutConstraint(item: imageView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 0)
+        rightConstraint = NSLayoutConstraint(item: imageView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: 0)
+        bottomConstraint = NSLayoutConstraint(item: imageView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
         
-        NSLayoutConstraint.activate([topConstraint, leftConstraint, rightConstraint, bottomConstraint])
+        NSLayoutConstraint.activate([topConstraint!, leftConstraint!, rightConstraint!, bottomConstraint!])
+        updateImageViewMargins()
     }
     
     let imageView = UIImageView()
-    var topConstraint: NSLayoutConstraint!
-    var leftConstraint: NSLayoutConstraint!
-    var rightConstraint: NSLayoutConstraint!
-    var bottomConstraint: NSLayoutConstraint!
+    var imageViewMargins: UIEdgeInsets = .zero {
+        didSet {
+            updateImageViewMargins()
+        }
+    }
+    
+    private var topConstraint: NSLayoutConstraint?
+    private var leftConstraint: NSLayoutConstraint?
+    private var rightConstraint: NSLayoutConstraint?
+    private var bottomConstraint: NSLayoutConstraint?
+    
+    private func updateImageViewMargins() {
+        topConstraint?.constant = imageViewMargins.top
+        leftConstraint?.constant = imageViewMargins.left
+        rightConstraint?.constant = -imageViewMargins.right
+        bottomConstraint?.constant = -imageViewMargins.bottom
+    }
 }
