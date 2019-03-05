@@ -11,17 +11,24 @@ import UIKit
 @available(iOS 8.0, tvOS 9.0, *)
 extension UIAlertController {
     
+    @discardableResult
+    @objc(sy_addActionWithTitle:style:handler:)
+    public func addAction(title: String?, style: UIAlertAction.Style, handler: ((UIAlertAction) -> ())?) -> UIAlertAction {
+        let action = UIAlertAction(title: title, style: style, handler: handler)
+        self.addAction(action)
+        return action
+    }
+
     @objc(sy_setContentViewController:height:)
     public func setContentViewController(_ contentVC: UIViewController?, height: CGFloat = -1) {
-        guard let contentVC = contentVC else { return }
         setValue(contentVC, forKey: "contentViewController")
         
-        if height > 0 {
-            contentVC.preferredContentSize.height = height
+        if contentVC != nil, height > 0 {
+            contentVC?.preferredContentSize.height = height
             preferredContentSize.height = height
         }
     }
-    
+
     @discardableResult
     @objc(sy_setupImageViewWithImage:height:margins:)
     public func setupImageView(image: UIImage?, height: CGFloat, margins: UIEdgeInsets = .zero) -> UIImageView {
