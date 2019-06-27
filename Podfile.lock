@@ -1,0 +1,16 @@
+PODS:
+  - SYKit (0.0.59)
+
+DEPENDENCIES:
+  - SYKit (from `./`)
+
+EXTERNAL SOURCES:
+  SYKit:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  SYKit: c16dde60ff42d1b33466dc4477ac64609def4d23
+
+PODFILE CHECKSUM: b5a1012af571c6e7f41e3017cff15a71f6f1acd4
+
+COCOAPODS: 1.7.2
