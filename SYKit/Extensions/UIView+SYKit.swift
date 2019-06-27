@@ -33,6 +33,7 @@ public extension UIView {
         return result
     }
 
+    @objc(sy_safeAreaBounds)
     var safeAreaBounds: CGRect {
         var value = bounds
         #if os(iOS)
@@ -48,11 +49,27 @@ public extension UIView {
     }
 
     // hiding an item in a UIStackView that is already hidden while animating has a bug in UIKit and prevents us to ever make this item visible again
+    @objc(sy_isHidden)
     var sy_isHidden: Bool {
         get { return isHidden }
         set {
             if newValue == isHidden { return }
             isHidden = newValue
         }
+    }
+
+    @objc(sy_screenshot)
+    var screenshot: UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+        defer { UIGraphicsEndImageContext() }
+        drawHierarchy(in: bounds, afterScreenUpdates: true)
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+    
+    @objc(sy_minFrameForSubviews)
+    var minFrameForSubviews: CGRect {
+        return self.subviews
+            .map { $0.frame }
+            .reduce(.zero, { $0.union($1) })
     }
 }

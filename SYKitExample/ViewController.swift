@@ -11,14 +11,33 @@ import SYKit
 
 class ViewController: UIViewController {
 
+    // MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        veryHighView.gradientLayer.colors = [UIColor.red.cgColor, UIColor.blue.cgColor]
+        veryHighView.gradientLayer.startPoint = .zero
+        veryHighView.gradientLayer.endPoint = .init(x: 0, y: 1)
+        veryHighView.gradientLayer.locations = [0, 1]
+        
+        scrollMaskView.scrollMask = .vertical
+        scrollMaskView.scrollMaskSize = 40
+        scrollMaskView.scrollView = scrollView
+        // to see the mask on the screen instead of masking the scrollView
+        //scrollMaskView.frame = .init(x: 0, y: 0, width: 200, height: 500)
+        //view.addSubview(scrollMaskView)
         
         runTests()
         swiftCompilationTest()
     }
 
+    // MARK: Properties
+    @IBOutlet private var scrollView: UIScrollView!
+    @IBOutlet private var veryHighView: SYGradientView!
+    @IBOutlet private var scrollMaskView: SYScrollMaskView!
+    
+    // MARK: Some tests
     func runTests() {
         let image = ObjectiveCTest.testNoirFilter()
         print("Image size:", image?.size ?? .zero)

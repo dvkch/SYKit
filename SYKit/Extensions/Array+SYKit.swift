@@ -14,15 +14,18 @@ public extension Array where Element : Equatable {
             self.remove(at: index)
         }
     }
+
+    func before(_ element: Element) -> Element? {
+        guard let index = self.firstIndex(of: element) else { return nil }
+        let newIndex = (index - 1 + count) % count
+        return self[newIndex]
+    }
     
     func after(_ element: Element) -> Element? {
         guard let index = self.firstIndex(of: element) else { return nil }
-        if index + 1 >= count {
-            return first
-        }
-        return self[index + 1]
+        let newIndex = (index + 1) % count
+        return self[newIndex]
     }
-
 }
 
 public extension Collection {

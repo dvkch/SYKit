@@ -49,15 +49,20 @@ public extension UIScrollView {
     
     @objc(sy_addPullToRefreshWithColor:action:)
     func addPullToRefresh(color: UIColor?, action: @escaping SYKitUIScrollViewRefreshAction) {
+        let control = UIRefreshControl()
+        control.tintColor = color
+        control.attributedTitle = nil
+        control.backgroundColor = .clear
+        addPullToRefresh(control, action: action)
+    }
+    
+    @objc(sy_addPullToRefresh:action:)
+    func addPullToRefresh(_ control: UIRefreshControl, action: @escaping SYKitUIScrollViewRefreshAction) {
         self.refreshControlAction = action
         
         sy_refreshControl?.removeFromSuperview()
         sy_refreshControl = nil
         
-        let control = UIRefreshControl()
-        control.tintColor = color
-        control.attributedTitle = nil
-        control.backgroundColor = .clear
         control.addTarget(self, action: #selector(sy_refreshControlValueChanged), for: .valueChanged)
         
         sy_refreshControl = control

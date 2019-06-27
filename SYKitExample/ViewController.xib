@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SYKitExample" customModuleProvider="target">
+            <connections>
+                <outlet property="scrollMaskView" destination="dg2-Az-9PK" id="6Hg-fZ-TZk"/>
+                <outlet property="scrollView" destination="E1t-90-DYk" id="vHq-tc-Q2z"/>
+                <outlet property="veryHighView" destination="aol-Jp-oih" id="d20-am-vJ0"/>
+                <outlet property="view" destination="amS-ki-XlY" id="c8A-S0-xXS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="amS-ki-XlY">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dg2-Az-9PK" customClass="SYScrollMaskView" customModule="SYKit">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="E1t-90-DYk">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aol-Jp-oih" customClass="SYGradientView" customModule="SYKit">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="2688"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="aol-Jp-oih" secondAttribute="bottom" id="Ph5-er-APb"/>
+                                <constraint firstItem="aol-Jp-oih" firstAttribute="leading" secondItem="E1t-90-DYk" secondAttribute="leading" id="Zrw-n5-ZVU"/>
+                                <constraint firstItem="aol-Jp-oih" firstAttribute="top" secondItem="E1t-90-DYk" secondAttribute="top" id="cec-Jb-qpT"/>
+                                <constraint firstAttribute="trailing" secondItem="aol-Jp-oih" secondAttribute="trailing" id="clk-M8-Cbc"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="E1t-90-DYk" secondAttribute="bottom" id="1Gl-XO-Nyl"/>
+                        <constraint firstItem="E1t-90-DYk" firstAttribute="leading" secondItem="dg2-Az-9PK" secondAttribute="leading" id="RTi-uh-p8l"/>
+                        <constraint firstItem="E1t-90-DYk" firstAttribute="top" secondItem="dg2-Az-9PK" secondAttribute="top" id="SVl-gd-ac8"/>
+                        <constraint firstAttribute="trailing" secondItem="E1t-90-DYk" secondAttribute="trailing" id="vOM-Mr-TdC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dg2-Az-9PK" secondAttribute="trailing" id="ENb-9d-NVs"/>
+                <constraint firstItem="aol-Jp-oih" firstAttribute="height" secondItem="amS-ki-XlY" secondAttribute="height" multiplier="3" id="Hom-e1-0Y5"/>
+                <constraint firstItem="dg2-Az-9PK" firstAttribute="top" secondItem="amS-ki-XlY" secondAttribute="top" id="cUd-Y7-loV"/>
+                <constraint firstAttribute="bottom" secondItem="dg2-Az-9PK" secondAttribute="bottom" id="hwj-jX-LzT"/>
+                <constraint firstItem="dg2-Az-9PK" firstAttribute="leading" secondItem="amS-ki-XlY" secondAttribute="leading" id="uP6-GS-z4e"/>
+                <constraint firstItem="aol-Jp-oih" firstAttribute="width" secondItem="amS-ki-XlY" secondAttribute="width" id="vy7-50-qmh"/>
+            </constraints>
+            <point key="canvasLocation" x="251" y="131"/>
+        </view>
+    </objects>
+</document>

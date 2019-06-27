@@ -17,6 +17,8 @@
 		97E6E01322C3CC9800A8335A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E6E01222C3CC9800A8335A /* ViewController.swift */; };
 		97E6E01822C3CC9900A8335A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E6E01722C3CC9900A8335A /* Assets.xcassets */; };
 		97E6E01B22C3CC9900A8335A /* LaunchScreen-iOS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97E6E01922C3CC9900A8335A /* LaunchScreen-iOS.storyboard */; };
+		97E7038522C53581005BBCDC /* ObjectiveCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 979E627222C4FEC900F194F9 /* ObjectiveCTest.m */; };
+		97E7038722C53770005BBCDC /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97E7038622C53770005BBCDC /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,7 @@
 		97E6E01722C3CC9900A8335A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97E6E01A22C3CC9900A8335A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/LaunchScreen-iOS.storyboard"; sourceTree = "<group>"; };
 		97E6E01C22C3CC9900A8335A /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		97E7038622C53770005BBCDC /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		D83A504D4EDED1F1A37844F7 /* Pods-SYKitExampleTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYKitExampleTV.debug.xcconfig"; path = "Target Support Files/Pods-SYKitExampleTV/Pods-SYKitExampleTV.debug.xcconfig"; sourceTree = "<group>"; };
 		ED27204A1678D7BF50C25766 /* Pods_SYKitExampleTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYKitExampleTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +106,7 @@
 			children = (
 				97E6E01022C3CC9800A8335A /* AppDelegate.swift */,
 				97E6E01222C3CC9800A8335A /* ViewController.swift */,
+				97E7038622C53770005BBCDC /* ViewController.xib */,
 				979E627122C4FEC900F194F9 /* ObjectiveCTest.h */,
 				979E627222C4FEC900F194F9 /* ObjectiveCTest.m */,
 				97E6E01722C3CC9900A8335A /* Assets.xcassets */,
@@ -209,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97E6E01B22C3CC9900A8335A /* LaunchScreen-iOS.storyboard in Resources */,
+				97E7038722C53770005BBCDC /* ViewController.xib in Resources */,
 				97E6E01822C3CC9900A8335A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9773085722C4CD3E0029964C /* AppDelegate.swift in Sources */,
+				97E7038522C53581005BBCDC /* ObjectiveCTest.m in Sources */,
 				9773085822C4CD3E0029964C /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,6 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.SYKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SYKitExample/SYKitExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
@@ -403,6 +410,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.SYKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_OBJC_BRIDGING_HEADER = "SYKitExample/SYKitExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};

@@ -7,76 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		047D113FFB5FA1D0FDAECC37E7B418DD /* UIButton+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584159616E2B6499035EE422BA1FCBEB /* UIButton+SYKit.swift */; };
+		05679D645C6200365B0B6C38D45FF00C /* SYKit-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 645480E8CF0FE1D73F418D3DC40CCAC4 /* SYKit-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0674D6EB40DC5868B924E6618E48F61A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B712C7D27EB7CD8F8A18A3EDE52765C0 /* Foundation.framework */; };
-		0751DF9465101A221B5030F8F303C893 /* UIColor+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0439A3A58D72ECB315785C11830D8 /* UIColor+SYKit.swift */; };
-		08B7EE0CEBEC86B88AB96BF3F272CB43 /* SYKit-tvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A78DA449BF60AE02B418592C2FE14D2 /* SYKit-tvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A2C3A09F79280D1EFB79E4CC4CE27A4 /* Optional+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D4A2F99E090B657A071CB4824530F /* Optional+SYKit.swift */; };
-		0BBDEAC737FA40D85B7352592679B196 /* Array+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD4384C25497937634A39EC68D18D1 /* Array+SYKit.swift */; };
-		1274110F201C3408BF48207B170D99FB /* Data+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765195EAA39CA8E396E092A646C127 /* Data+SYKit.swift */; };
-		133E96503A0877C75C51C4C23E966C3E /* CoreGraphics+SYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E168C3657ABD69B9BF829C6E7C681D1 /* CoreGraphics+SYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		16A033ED84F6D466671D4C47F639BF44 /* SYScrollMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164A0928D9B7EAC53F5BD3AD30E9ACE /* SYScrollMaskView.swift */; };
-		1A17E3FE83079D7A116751F195FCC1F7 /* String+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E285CF9E347D6B088F73471DC4F74 /* String+SYKit.swift */; };
-		28F05933E43522E19C4A5635B68C1531 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D50031945639C9CFCD3CBF24E18561 /* Foundation.framework */; };
-		323DD72ADC416BFB446B05093DA9D08E /* UIWindow+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96956D47B054B4D9E513407ECA8A116 /* UIWindow+SYKit.swift */; };
-		36E735E0838C8FA4AE58A448B5EB8F94 /* UIWindow+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96956D47B054B4D9E513407ECA8A116 /* UIWindow+SYKit.swift */; };
-		3A043FC7BDF8C61BCAD8E509A73C4F7A /* UIViewController+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E86CA3992C045F1DCB5BDB4A2D5D5A7 /* UIViewController+SYKit.swift */; };
-		3ED8969602D37CC86CB4E48AD474971A /* UITableView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3050F7256CA34F83457D45F54AA1CFF /* UITableView+SYKit.swift */; };
-		4B550EB8CB11E9FA5BF62B1C083C2C09 /* Array+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BD4384C25497937634A39EC68D18D1 /* Array+SYKit.swift */; };
-		519032143EBD2D4E747FED4F0E9FD981 /* NSAttributedString+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84158C74553D618543AE0C6C6128ECD2 /* NSAttributedString+SYKit.swift */; };
-		540440479656F082991DFB02D74F447F /* SYKit-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F55FA520432240EAAC49885CE9563E0 /* SYKit-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		546BC7EF1A600F4BD032434C6EAA5EF2 /* Data+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765195EAA39CA8E396E092A646C127 /* Data+SYKit.swift */; };
-		55908EEC53588439E961974627B17568 /* UIImage+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ABCD0B657CE259D0BB1539B7DA8227 /* UIImage+SYKit.swift */; };
-		56700F53FA94E957F0BEDEFCDF61D778 /* SYGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE809D860935B84456F39F93609B6F6 /* SYGradientView.swift */; };
-		56A07E7EFBF08036C817D73457C121B2 /* CoreGraphics+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011D62CE0AB1D72A09E86E1C1F018F3 /* CoreGraphics+SYKit.swift */; };
-		574FDBB678C1746B2FDBCE3006376649 /* UISearchBar+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7E3CA1015D996FC4C116C1F11164F /* UISearchBar+SYKit.swift */; };
-		59538E2064546BC627A267E9EA236C13 /* CoreGraphics+SYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E168C3657ABD69B9BF829C6E7C681D1 /* CoreGraphics+SYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5C72C655A31B8B898D935FBA8A2E8029 /* Optional+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D4A2F99E090B657A071CB4824530F /* Optional+SYKit.swift */; };
-		611CF63B6012B8CB2F3F5CC1B4CBB1BA /* UISearchBar+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED7E3CA1015D996FC4C116C1F11164F /* UISearchBar+SYKit.swift */; };
-		66CE27A3F6F70AF95ABF425015ED8525 /* UICollectionView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B162C8618978D5447D2D02DD1DBDB13 /* UICollectionView+SYKit.swift */; };
-		6931D91F8E2A720F7F612DCA6AEE0A45 /* SYDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD0DDA82D2F39CA8CAF1084456482D /* SYDeviceModel.swift */; };
-		6D7C617D2FE83E4122E5A2ADCAC74AA8 /* SYGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE809D860935B84456F39F93609B6F6 /* SYGradientView.swift */; };
+		07D4D2981EB3298AB5BABF9E7D042AD4 /* UIView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7051A4E5D4C2CD63D6C84BB777B5A3D3 /* UIView+SYKit.swift */; };
+		0B707F3C976FF37AF6C3442EF1BDA113 /* SYShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A69088EA50D97458C49FA96B9873CE /* SYShapeView.swift */; };
+		0F2A0BB854E99EFD5322CAA23DCB1492 /* NSObject+SYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 060CFB3DA07C57FC42A6F0F82E6140AA /* NSObject+SYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10AD36136FB6C6E0B2A3ECD943BB5EF1 /* Date+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4670FDF3321A088F7F946593E3579979 /* Date+SYKit.swift */; };
+		1113EB4010FBF1E6DBBC7983F6F8B011 /* UIDevice+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C6B6D49E8F218C3C77154E18D62B54 /* UIDevice+SYKit.swift */; };
+		1B53CDE6EA68FF6080B33BDED8FF80A2 /* UIWindow+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231933E331705A4EFF6E3C4FD87D1C2 /* UIWindow+SYKit.swift */; };
+		1E5327FFCF1D17C075227E9DF43BFB67 /* UIImage+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4239E4E12ACE2A65863F40B98FA10B /* UIImage+SYKit.swift */; };
+		1FA163DA28A2F5D51E00292DEFE9D339 /* FileManager+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DD7BE46C984AF92DB202565D640D3 /* FileManager+SYKit.swift */; };
+		223A9C9DBF27A3F3F631AFB37CEE0D4F /* UIButton+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A986ADE540DD017F8464860EFE8638E /* UIButton+SYKit.swift */; };
+		24EA23327699124CC9252F2C910300C3 /* Bundle+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E92039C2B6955C6747648803EAF01 /* Bundle+SYKit.swift */; };
+		26138329B7D0F536107D4C9F4CC02C7C /* SYGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84862324DC398DEDF316F7A7D6624BDF /* SYGradientView.swift */; };
+		2B81617FF166B95BDED8602130EA65F1 /* UIViewController+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2F14AD5DC4B34EE0818E844120AA9 /* UIViewController+SYKit.swift */; };
+		2C250881FE544FD3A6DCD95BE1861F6E /* CoreGraphics+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EBC147C53FB0FB5BF52CF53172A34 /* CoreGraphics+SYKit.swift */; };
+		2C5C49F895533B5412D4C1BA42EBB1D0 /* Data+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89FF893C1ED2F40532A42A47550F729 /* Data+SYKit.swift */; };
+		368C6F393E58BB8D87BDBE2A092041D6 /* URL+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDC3A998C29B0AE110918B9A1E3243 /* URL+SYKit.swift */; };
+		38738AB44BD20C1144E8B7C3937681E7 /* String+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331F483B0E1933A305AA787D59753BF /* String+SYKit.swift */; };
+		39AC3471670CC6FF9F412A7C490B3C87 /* CoreGraphics+SYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E0FF5984F8D2A02392BD3CA504F975D7 /* CoreGraphics+SYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41FEC8F6BF842EF8261522F315A80AB2 /* UIScrollView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5648E3C197F33FF731D12DAFCF112C0 /* UIScrollView+SYKit.swift */; };
+		457D7299F9A346673592C1659655DACC /* UIView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7051A4E5D4C2CD63D6C84BB777B5A3D3 /* UIView+SYKit.swift */; };
+		46A941144B79030DACFE54A7395661C4 /* UIAlertController+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B2B94F2CF2E0FCE32B8818A71DBD4 /* UIAlertController+SYKit.swift */; };
+		4DBF71C6F485FA64A968D89E7245AB3D /* FileManager+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303DD7BE46C984AF92DB202565D640D3 /* FileManager+SYKit.swift */; };
+		4F0A8F2C6627DD454B2BF1F568E75441 /* Date+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4670FDF3321A088F7F946593E3579979 /* Date+SYKit.swift */; };
+		60297D1C21CCB45BACAD6F52BC143E69 /* UITableView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478EFEECDAFE421D7C0A80D6B002A65 /* UITableView+SYKit.swift */; };
+		63162F6F814CDE1B68417A31C68DBA84 /* CoreGraphics+SYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D952DE4A238F3BB0BF839BFF301CF4A /* CoreGraphics+SYKit.m */; };
+		6317FADD28C2156E242B9CFA7033DBB7 /* UICollectionView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A40549E8B7A59171BC6C50C58FB7FE /* UICollectionView+SYKit.swift */; };
+		68840A986E60CA48D498DC30595ABA05 /* Data+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89FF893C1ED2F40532A42A47550F729 /* Data+SYKit.swift */; };
+		68D12F9B9D8ADF7087E3445685ED6E70 /* NSObject+SYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 060CFB3DA07C57FC42A6F0F82E6140AA /* NSObject+SYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		695840C44C295E8DC774963C996A00B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B712C7D27EB7CD8F8A18A3EDE52765C0 /* Foundation.framework */; };
+		6A3BA0FAAFF812345ADB6A1142B3220C /* SYDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57739ACB94071FBD4F73855060007BB2 /* SYDeviceModel.swift */; };
+		6F6A238000F581B2FB9DDE02DFF992BA /* UIViewController+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF2F14AD5DC4B34EE0818E844120AA9 /* UIViewController+SYKit.swift */; };
 		712144204CB21584C8487FD64AFF3328 /* Pods-SYKitExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEEF168213340D0709502C8F247137F /* Pods-SYKitExample-dummy.m */; };
-		72F95CB99F6F5EBFAC8D7E6BFC28CB92 /* String+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749E285CF9E347D6B088F73471DC4F74 /* String+SYKit.swift */; };
+		724C2550232016CDA63FCB1A5B093BE2 /* NSAttributedString+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FF0110187A28D22F2CAA703A0BA35B /* NSAttributedString+SYKit.swift */; };
+		7296D122E85C83D43DB4D31CDCDA4628 /* UIImage+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4239E4E12ACE2A65863F40B98FA10B /* UIImage+SYKit.swift */; };
+		738B43675E758008CE378C849351E3DB /* NSObject+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8D83927C92CD4D1629C301663FF939 /* NSObject+SYKit.swift */; };
+		73EBA9E591532413FB114D64D1495731 /* SYScrollMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D7A9AE3797748F684AFFFC01E1B5F8 /* SYScrollMaskView.swift */; };
+		78E9E15B44E89221C81F53DFA02E71DF /* UIWindow+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B231933E331705A4EFF6E3C4FD87D1C2 /* UIWindow+SYKit.swift */; };
 		7A6523A29E32B1BB661FB97BE58527F3 /* Pods-SYKitExample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 281BFF29D3A1419AC27160AFA4871EE2 /* Pods-SYKitExample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C91A894E4897CB756824B499AC5A03D /* SYShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5DABA3D0A3A2E2765B15669827A259 /* SYShapeView.swift */; };
-		7EC4B99B00A4039B87CB5E4FAFB29705 /* UIScreen+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02373F5353DF98F1136374A5CC8970 /* UIScreen+SYKit.swift */; };
-		80EDFC5383DEA91BE3870AF3E27C86AE /* SYWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A50617BEAE9BA0F6FEC0792682ECB /* SYWindow.swift */; };
-		8317BB25B5C1867661E076B73A7475DD /* UIColor+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F0439A3A58D72ECB315785C11830D8 /* UIColor+SYKit.swift */; };
-		84354D0974B6C31FB74AEBCB06630A8D /* NSObject+SYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA6B146390BCB33231F7E6F8CCD88A9 /* NSObject+SYKit.m */; };
-		8A77872A3C4864B689DB4C6AC4ECBCB7 /* SYDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD0DDA82D2F39CA8CAF1084456482D /* SYDeviceModel.swift */; };
+		7E503449B86357820DE5031889F3B6F0 /* SYKit-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27439D10D7DD061FDDDE6CF952185AA5 /* SYKit-tvOS-dummy.m */; };
+		83F76C39DF6275ECDF1E9707AA00BB69 /* Array+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67213A3FCC889608231405B268919846 /* Array+SYKit.swift */; };
+		86E18D0068177C723654751C885E4256 /* Optional+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5B9B93B0F1485672DF91D60741A248 /* Optional+SYKit.swift */; };
+		87B946F48CEC35CA82E9C737AA3F695B /* UIDevice+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C6B6D49E8F218C3C77154E18D62B54 /* UIDevice+SYKit.swift */; };
+		890EDCD3CB031AFA328BDA6F494DFA11 /* NSObject+SYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942630607C5E6E283F176639D9024C8 /* NSObject+SYKit.m */; };
+		8A34F8AC4518F3C94C2AFA01CCC5AA72 /* Bundle+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E92039C2B6955C6747648803EAF01 /* Bundle+SYKit.swift */; };
 		8ACF2F13D31F2F06061D2DE05BF4CDD2 /* Pods-SYKitExampleTV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB7686B3DD1F80A27E8031A2C3E756EF /* Pods-SYKitExampleTV-dummy.m */; };
-		8C1B1949A18A0EE2E81D213F1848AE79 /* UIViewController+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E86CA3992C045F1DCB5BDB4A2D5D5A7 /* UIViewController+SYKit.swift */; };
-		8C3FDD4D95C13898AA887D82741899FB /* UIImage+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ABCD0B657CE259D0BB1539B7DA8227 /* UIImage+SYKit.swift */; };
-		8F11C02CAE40CF32C24286675FBC8D77 /* NSObject+SYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E620EFAA1C93128CC79B8ADE85B2C87 /* NSObject+SYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93F39A82423BF4C9C352A910DE3E13A2 /* UICollectionView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B162C8618978D5447D2D02DD1DBDB13 /* UICollectionView+SYKit.swift */; };
-		955C4412531FA5598F4B0971E174963B /* SYScrollMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F164A0928D9B7EAC53F5BD3AD30E9ACE /* SYScrollMaskView.swift */; };
-		9A7658B8C2899B035F9DDA0EA79B0D76 /* UIButton+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584159616E2B6499035EE422BA1FCBEB /* UIButton+SYKit.swift */; };
-		9C2277FD2FEE01BD5820FC8ACF180C97 /* NSObject+SYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BA6B146390BCB33231F7E6F8CCD88A9 /* NSObject+SYKit.m */; };
-		9D765474051BCC8692BC84F0983C96A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B712C7D27EB7CD8F8A18A3EDE52765C0 /* Foundation.framework */; };
-		A858A64255ACD74D3BF72B92EC3A0C9C /* NSObject+SYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E620EFAA1C93128CC79B8ADE85B2C87 /* NSObject+SYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAD19D3FEC9A3548D49C47033D13479C /* UITableView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3050F7256CA34F83457D45F54AA1CFF /* UITableView+SYKit.swift */; };
-		AC2C22BFB996A407CB625462B40EDD5E /* UIScrollView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B4597ACDFC5D54633BA41D72935980 /* UIScrollView+SYKit.swift */; };
-		B7AD66CF3859614E038E23D3B3E76927 /* AVAsset+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FED77CFA708FC54A06731A738A9C9 /* AVAsset+SYKit.swift */; };
-		B9EA9A0C0CC4CAF2506377C0064CF378 /* CoreGraphics+SYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F85C64281A2F3E16414529DA05AEB /* CoreGraphics+SYKit.m */; };
-		BA3B5A77320B47C95A8113B8D976C9C2 /* CoreGraphics+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9011D62CE0AB1D72A09E86E1C1F018F3 /* CoreGraphics+SYKit.swift */; };
-		BA973BB829F7AD9C918A2B3B04EC7EF5 /* SYKit-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C63B3288E29B87DE320618E46217E11F /* SYKit-tvOS-dummy.m */; };
-		BDBA1900EA545FAE19DBF46E1C95768B /* UIAlertController+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148D185EE5A34AC71E77B538A93B02B /* UIAlertController+SYKit.swift */; };
-		C03B1031230E9800827949D1F2E6AA83 /* SYShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5DABA3D0A3A2E2765B15669827A259 /* SYShapeView.swift */; };
-		C1025B3F1AECF5547482A9707B02EE71 /* UIAlertController+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E148D185EE5A34AC71E77B538A93B02B /* UIAlertController+SYKit.swift */; };
-		C1AF7B80035E9A858905349290FC71CF /* NSObject+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C81584FC450AA0031CD9513D58F8C17 /* NSObject+SYKit.swift */; };
-		C3225BD6089E3F9039477D085E120B75 /* UIScrollView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B4597ACDFC5D54633BA41D72935980 /* UIScrollView+SYKit.swift */; };
+		8B9FDDFD81D35CB226157F29CAFFF295 /* UICollectionView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A40549E8B7A59171BC6C50C58FB7FE /* UICollectionView+SYKit.swift */; };
+		8ECD0786B9824848DE0EEEE8FBF7BB33 /* UITableView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478EFEECDAFE421D7C0A80D6B002A65 /* UITableView+SYKit.swift */; };
+		979F902E115C50BCE0BEBB7EEFD23D27 /* UIAlertController+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5B2B94F2CF2E0FCE32B8818A71DBD4 /* UIAlertController+SYKit.swift */; };
+		A8190BDC73D6EE923231271BC9A81B49 /* CoreGraphics+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187EBC147C53FB0FB5BF52CF53172A34 /* CoreGraphics+SYKit.swift */; };
+		B2DF93ADB2DF5BA6067033D43DA45C8C /* Optional+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5B9B93B0F1485672DF91D60741A248 /* Optional+SYKit.swift */; };
+		B3B645001D19E84EF05399D1044465BC /* SYDeviceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57739ACB94071FBD4F73855060007BB2 /* SYDeviceModel.swift */; };
+		B3ED9B9C62085E4CB9FC241C8361B306 /* UIScreen+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0657BF9013B42FEED5513CD3A8A93 /* UIScreen+SYKit.swift */; };
+		B5F1370BA65C834CB81D96C49B9B1C24 /* UISearchBar+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C845D36EABBC731DFA72AE7E906DD5 /* UISearchBar+SYKit.swift */; };
+		B6A297436CA36D438B54082FB1FF4441 /* SYShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A69088EA50D97458C49FA96B9873CE /* SYShapeView.swift */; };
+		BB2BDBA2902DDB66C4DBE73697BB5FFC /* UIScrollView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5648E3C197F33FF731D12DAFCF112C0 /* UIScrollView+SYKit.swift */; };
+		BFC27FDCA1D17FBA4D08A2FC3DA39086 /* Array+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67213A3FCC889608231405B268919846 /* Array+SYKit.swift */; };
+		C2C4438D543DA9FB0AB81561E41C981D /* UIColor+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DD66F419721A7E2701560FF81398EF /* UIColor+SYKit.swift */; };
+		C501A7F1417474AD71C7BA3221C3E300 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D50031945639C9CFCD3CBF24E18561 /* Foundation.framework */; };
 		C598927BFBFBF580C59FDAE2038F4A38 /* Pods-SYKitExampleTV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22D496AB87A106AA3D4AC5FE811A4A71 /* Pods-SYKitExampleTV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB4FE83A70E4A28CB8DB37F021C61A82 /* UIView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15AA009C7D59B49096C0145AE29D0B /* UIView+SYKit.swift */; };
-		CD0E077C1CD1A93E4205EB7405101DED /* SYWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A50617BEAE9BA0F6FEC0792682ECB /* SYWindow.swift */; };
-		D740E5CB5F0AB3FA6A4F51A34ED52CCD /* AVAsset+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94FED77CFA708FC54A06731A738A9C9 /* AVAsset+SYKit.swift */; };
-		D7A32B156ACB54EB7332AF4A06CA54CB /* NSAttributedString+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84158C74553D618543AE0C6C6128ECD2 /* NSAttributedString+SYKit.swift */; };
-		D8D678E75242F6BD59C44EF5D52AEB5B /* CoreGraphics+SYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0F85C64281A2F3E16414529DA05AEB /* CoreGraphics+SYKit.m */; };
-		DCB35D183F9DF87BFCF0CA6FF75DC248 /* UIScreen+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD02373F5353DF98F1136374A5CC8970 /* UIScreen+SYKit.swift */; };
-		E1B59AC3752BF1F83A0F07F5676F36A3 /* SYKit-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A75918FE8F7A3A1F5F7CD0EBD0BF9A /* SYKit-iOS-dummy.m */; };
-		E884B1D4287862D9F5531962C0D07EA1 /* UIView+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC15AA009C7D59B49096C0145AE29D0B /* UIView+SYKit.swift */; };
+		CA47BF41033F291D16C9F42DE861E6C7 /* CoreGraphics+SYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E0FF5984F8D2A02392BD3CA504F975D7 /* CoreGraphics+SYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE4F418CFBB8DC023CBD16105FC0D778 /* SYKit-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74108C4C1ABF7CB9ED493D6F7792B5AB /* SYKit-iOS-dummy.m */; };
+		CEDC844C6D293D35F7FCA8960FEC56D5 /* AVAsset+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF189B469478BE2C6A1C1629D56AFF4 /* AVAsset+SYKit.swift */; };
+		D131D1EE75A5C6D988E9389E383B479A /* CoreGraphics+SYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D952DE4A238F3BB0BF839BFF301CF4A /* CoreGraphics+SYKit.m */; };
+		D4C2DE97A36073D03E5EEBB982BACD85 /* UIScreen+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB0657BF9013B42FEED5513CD3A8A93 /* UIScreen+SYKit.swift */; };
+		D94A495120474296C75073CEAE868FA8 /* NSAttributedString+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32FF0110187A28D22F2CAA703A0BA35B /* NSAttributedString+SYKit.swift */; };
+		DFA681B48329857461B35031336AD5B1 /* SYWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E0AFD5C2F687EA64E7CBE0D18A4146 /* SYWindow.swift */; };
+		E059CEB40F4FE852C8F980767C79A646 /* UIButton+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A986ADE540DD017F8464860EFE8638E /* UIButton+SYKit.swift */; };
+		E228BD84FA9486D14AB2C5807BB1DDF6 /* URL+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DDC3A998C29B0AE110918B9A1E3243 /* URL+SYKit.swift */; };
+		E5307192867F8045C4C6E2105E9B5991 /* SYGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84862324DC398DEDF316F7A7D6624BDF /* SYGradientView.swift */; };
+		E5816B4B3EAB3548B97A2F45CB67DC83 /* NSObject+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8D83927C92CD4D1629C301663FF939 /* NSObject+SYKit.swift */; };
+		E6BB40BB73308E8E227D8CC72F4F0087 /* UISearchBar+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C845D36EABBC731DFA72AE7E906DD5 /* UISearchBar+SYKit.swift */; };
+		E97585E3B38E5A4922305EB5257C782F /* UIColor+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DD66F419721A7E2701560FF81398EF /* UIColor+SYKit.swift */; };
 		F00873E1B7EE0137CE5A010AB4C90CEF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D50031945639C9CFCD3CBF24E18561 /* Foundation.framework */; };
-		F64C4108BBFCD69DCCF3CF8061EDBAEB /* NSObject+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C81584FC450AA0031CD9513D58F8C17 /* NSObject+SYKit.swift */; };
+		F3FC6AB1A6AA410BEC8131AF55685384 /* SYKit-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B95DAB769D679836D727CDC4FA5211D /* SYKit-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7DC1A595FBFD6D9D62D70D27C69434D /* String+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B331F483B0E1933A305AA787D59753BF /* String+SYKit.swift */; };
+		FD2C7B2939D0DCAF4E2F554EE26AE614 /* AVAsset+SYKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF189B469478BE2C6A1C1629D56AFF4 /* AVAsset+SYKit.swift */; };
+		FEB4BFEEA4CA962EF0CE4F099631E595 /* SYWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E0AFD5C2F687EA64E7CBE0D18A4146 /* SYWindow.swift */; };
+		FF6BEBABB3B87FDF9D6D3636705252A7 /* NSObject+SYKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942630607C5E6E283F176639D9024C8 /* NSObject+SYKit.m */; };
+		FFBF32184538C8877BDECE7EAEC3E188 /* SYScrollMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D7A9AE3797748F684AFFFC01E1B5F8 /* SYScrollMaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,83 +107,88 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		060CFB3DA07C57FC42A6F0F82E6140AA /* NSObject+SYKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+SYKit.h"; sourceTree = "<group>"; };
 		0A661C0D08A3E9515475B48C1B23CDAB /* SYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SYKit.framework; path = "SYKit-tvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A78DA449BF60AE02B418592C2FE14D2 /* SYKit-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYKit-tvOS-umbrella.h"; path = "../SYKit-tvOS/SYKit-tvOS-umbrella.h"; sourceTree = "<group>"; };
-		0A9128D1F4C3A738CEDA5E85E55F18A2 /* SYKit-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SYKit-iOS.xcconfig"; sourceTree = "<group>"; };
+		0D952DE4A238F3BB0BF839BFF301CF4A /* CoreGraphics+SYKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CoreGraphics+SYKit.m"; sourceTree = "<group>"; };
+		187EBC147C53FB0FB5BF52CF53172A34 /* CoreGraphics+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+SYKit.swift"; sourceTree = "<group>"; };
+		20DD66F419721A7E2701560FF81398EF /* UIColor+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+SYKit.swift"; sourceTree = "<group>"; };
 		22D496AB87A106AA3D4AC5FE811A4A71 /* Pods-SYKitExampleTV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYKitExampleTV-umbrella.h"; sourceTree = "<group>"; };
+		2478EFEECDAFE421D7C0A80D6B002A65 /* UITableView+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITableView+SYKit.swift"; sourceTree = "<group>"; };
+		27439D10D7DD061FDDDE6CF952185AA5 /* SYKit-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SYKit-tvOS-dummy.m"; path = "../SYKit-tvOS/SYKit-tvOS-dummy.m"; sourceTree = "<group>"; };
 		281BFF29D3A1419AC27160AFA4871EE2 /* Pods-SYKitExample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SYKitExample-umbrella.h"; sourceTree = "<group>"; };
 		2A133F4382AA9AAA966D0D9304517BDC /* Pods-SYKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYKitExample.debug.xcconfig"; sourceTree = "<group>"; };
-		31BD4384C25497937634A39EC68D18D1 /* Array+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+SYKit.swift"; sourceTree = "<group>"; };
-		3B0F85C64281A2F3E16414529DA05AEB /* CoreGraphics+SYKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CoreGraphics+SYKit.m"; sourceTree = "<group>"; };
-		3B17CECB82022C1471947135B8CECC4C /* SYKit-tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "SYKit-tvOS-Info.plist"; path = "../SYKit-tvOS/SYKit-tvOS-Info.plist"; sourceTree = "<group>"; };
-		3E168C3657ABD69B9BF829C6E7C681D1 /* CoreGraphics+SYKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CoreGraphics+SYKit.h"; sourceTree = "<group>"; };
+		2AF189B469478BE2C6A1C1629D56AFF4 /* AVAsset+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "AVAsset+SYKit.swift"; sourceTree = "<group>"; };
+		303DD7BE46C984AF92DB202565D640D3 /* FileManager+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "FileManager+SYKit.swift"; sourceTree = "<group>"; };
+		32FF0110187A28D22F2CAA703A0BA35B /* NSAttributedString+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+SYKit.swift"; sourceTree = "<group>"; };
+		3D5B9B93B0F1485672DF91D60741A248 /* Optional+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Optional+SYKit.swift"; sourceTree = "<group>"; };
+		40FFB7B1C94CCD5C82985C641AEC771B /* SYKit-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SYKit-tvOS.xcconfig"; path = "../SYKit-tvOS/SYKit-tvOS.xcconfig"; sourceTree = "<group>"; };
+		4670FDF3321A088F7F946593E3579979 /* Date+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+SYKit.swift"; sourceTree = "<group>"; };
 		482449039DCFD789633AD32C3F5B05AB /* Pods-SYKitExampleTV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SYKitExampleTV.modulemap"; sourceTree = "<group>"; };
-		4AB66DEB7EE9DD1FB70FC62F7338F367 /* SYKit-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SYKit-iOS.modulemap"; sourceTree = "<group>"; };
-		51856A2F2A394749C189DF7210C593B8 /* SYKit-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYKit-tvOS-prefix.pch"; path = "../SYKit-tvOS/SYKit-tvOS-prefix.pch"; sourceTree = "<group>"; };
-		584159616E2B6499035EE422BA1FCBEB /* UIButton+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+SYKit.swift"; sourceTree = "<group>"; };
+		4A4239E4E12ACE2A65863F40B98FA10B /* UIImage+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+SYKit.swift"; sourceTree = "<group>"; };
+		4CB0657BF9013B42FEED5513CD3A8A93 /* UIScreen+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIScreen+SYKit.swift"; sourceTree = "<group>"; };
+		4F5B2B94F2CF2E0FCE32B8818A71DBD4 /* UIAlertController+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SYKit.swift"; sourceTree = "<group>"; };
+		54D7A9AE3797748F684AFFFC01E1B5F8 /* SYScrollMaskView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYScrollMaskView.swift; sourceTree = "<group>"; };
+		57739ACB94071FBD4F73855060007BB2 /* SYDeviceModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYDeviceModel.swift; sourceTree = "<group>"; };
 		586BBB3FD52623EB02CD70FC44A8EA65 /* Pods-SYKitExampleTV-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYKitExampleTV-acknowledgements.plist"; sourceTree = "<group>"; };
 		5A6A7A4E74BED20EA1376AA14D7C4DE5 /* Pods_SYKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SYKitExample.framework; path = "Pods-SYKitExample.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6BA6B146390BCB33231F7E6F8CCD88A9 /* NSObject+SYKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SYKit.m"; sourceTree = "<group>"; };
-		6C81584FC450AA0031CD9513D58F8C17 /* NSObject+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSObject+SYKit.swift"; sourceTree = "<group>"; };
-		6DF29C396F8230D24C32E71BD9E76BFB /* SYKit-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SYKit-iOS-Info.plist"; sourceTree = "<group>"; };
-		6F8A50617BEAE9BA0F6FEC0792682ECB /* SYWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYWindow.swift; sourceTree = "<group>"; };
-		73F0439A3A58D72ECB315785C11830D8 /* UIColor+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+SYKit.swift"; sourceTree = "<group>"; };
-		749E285CF9E347D6B088F73471DC4F74 /* String+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+SYKit.swift"; sourceTree = "<group>"; };
+		5A986ADE540DD017F8464860EFE8638E /* UIButton+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+SYKit.swift"; sourceTree = "<group>"; };
+		645480E8CF0FE1D73F418D3DC40CCAC4 /* SYKit-tvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYKit-tvOS-umbrella.h"; path = "../SYKit-tvOS/SYKit-tvOS-umbrella.h"; sourceTree = "<group>"; };
+		67213A3FCC889608231405B268919846 /* Array+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+SYKit.swift"; sourceTree = "<group>"; };
+		687BAABF1DF705DEDFF8D317CDE8EDE0 /* SYKit-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SYKit-iOS-Info.plist"; sourceTree = "<group>"; };
+		69A40549E8B7A59171BC6C50C58FB7FE /* UICollectionView+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UICollectionView+SYKit.swift"; sourceTree = "<group>"; };
+		6B7F06AFAEFD256B5C81D1D7E34ABA54 /* SYKit-tvOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SYKit-tvOS-prefix.pch"; path = "../SYKit-tvOS/SYKit-tvOS-prefix.pch"; sourceTree = "<group>"; };
+		6FF2F14AD5DC4B34EE0818E844120AA9 /* UIViewController+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+SYKit.swift"; sourceTree = "<group>"; };
+		7051A4E5D4C2CD63D6C84BB777B5A3D3 /* UIView+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+SYKit.swift"; sourceTree = "<group>"; };
+		74108C4C1ABF7CB9ED493D6F7792B5AB /* SYKit-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SYKit-iOS-dummy.m"; sourceTree = "<group>"; };
 		7741D42F6946AE28F6B0D24B023635D9 /* Pods-SYKitExample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SYKitExample.modulemap"; sourceTree = "<group>"; };
 		78B4FB538E51726703DD68D81AFB1D17 /* Pods-SYKitExampleTV-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYKitExampleTV-frameworks.sh"; sourceTree = "<group>"; };
 		80D50031945639C9CFCD3CBF24E18561 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		81F56677BD31F32B3F31A0A0486DB254 /* SYKit-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SYKit-tvOS.modulemap"; path = "../SYKit-tvOS/SYKit-tvOS.modulemap"; sourceTree = "<group>"; };
-		84158C74553D618543AE0C6C6128ECD2 /* NSAttributedString+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+SYKit.swift"; sourceTree = "<group>"; };
+		81C845D36EABBC731DFA72AE7E906DD5 /* UISearchBar+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UISearchBar+SYKit.swift"; sourceTree = "<group>"; };
 		84495D1F863B2D7E170C23D45480190D /* Pods-SYKitExampleTV-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYKitExampleTV-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8B162C8618978D5447D2D02DD1DBDB13 /* UICollectionView+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UICollectionView+SYKit.swift"; sourceTree = "<group>"; };
-		8E620EFAA1C93128CC79B8ADE85B2C87 /* NSObject+SYKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+SYKit.h"; sourceTree = "<group>"; };
-		8E86CA3992C045F1DCB5BDB4A2D5D5A7 /* UIViewController+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+SYKit.swift"; sourceTree = "<group>"; };
-		8ED7E3CA1015D996FC4C116C1F11164F /* UISearchBar+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UISearchBar+SYKit.swift"; sourceTree = "<group>"; };
-		8EE809D860935B84456F39F93609B6F6 /* SYGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYGradientView.swift; sourceTree = "<group>"; };
-		8F55FA520432240EAAC49885CE9563E0 /* SYKit-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYKit-iOS-umbrella.h"; sourceTree = "<group>"; };
-		8FCF15F0E36E185D7403101015E26FC4 /* SYKit-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYKit-iOS-prefix.pch"; sourceTree = "<group>"; };
-		9011D62CE0AB1D72A09E86E1C1F018F3 /* CoreGraphics+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+SYKit.swift"; sourceTree = "<group>"; };
+		84862324DC398DEDF316F7A7D6624BDF /* SYGradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYGradientView.swift; sourceTree = "<group>"; };
+		87F5AC239CC1A76B2CA756670F10FC59 /* SYKit-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SYKit-iOS.xcconfig"; sourceTree = "<group>"; };
+		8B95DAB769D679836D727CDC4FA5211D /* SYKit-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYKit-iOS-umbrella.h"; sourceTree = "<group>"; };
+		903E92039C2B6955C6747648803EAF01 /* Bundle+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Bundle+SYKit.swift"; sourceTree = "<group>"; };
 		91F7A463174085A39FB9917F9D8E2420 /* Pods-SYKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYKitExample.release.xcconfig"; sourceTree = "<group>"; };
+		96A69088EA50D97458C49FA96B9873CE /* SYShapeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYShapeView.swift; sourceTree = "<group>"; };
+		9942630607C5E6E283F176639D9024C8 /* NSObject+SYKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SYKit.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3050F7256CA34F83457D45F54AA1CFF /* UITableView+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITableView+SYKit.swift"; sourceTree = "<group>"; };
-		A46D4A2F99E090B657A071CB4824530F /* Optional+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Optional+SYKit.swift"; sourceTree = "<group>"; };
+		9DE045E890C43F5AFD930D913D071646 /* SYKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SYKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A6E86A5AE034C8249A88901266C6CB84 /* Pods-SYKitExample-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYKitExample-Info.plist"; sourceTree = "<group>"; };
-		A96956D47B054B4D9E513407ECA8A116 /* UIWindow+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIWindow+SYKit.swift"; sourceTree = "<group>"; };
-		B0B4597ACDFC5D54633BA41D72935980 /* UIScrollView+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIScrollView+SYKit.swift"; sourceTree = "<group>"; };
+		A8088E1B7324DC25520ECDEA2BAC4F7B /* SYKit-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SYKit-iOS-prefix.pch"; sourceTree = "<group>"; };
+		AA8D83927C92CD4D1629C301663FF939 /* NSObject+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSObject+SYKit.swift"; sourceTree = "<group>"; };
+		B231933E331705A4EFF6E3C4FD87D1C2 /* UIWindow+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIWindow+SYKit.swift"; sourceTree = "<group>"; };
 		B25F8E081F97F657E4E94E6C5EDECC18 /* SYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SYKit.framework; path = "SYKit-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2F83EBC7EE648ED24540422B635EE21 /* SYKit-tvOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SYKit-tvOS.xcconfig"; path = "../SYKit-tvOS/SYKit-tvOS.xcconfig"; sourceTree = "<group>"; };
+		B331F483B0E1933A305AA787D59753BF /* String+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+SYKit.swift"; sourceTree = "<group>"; };
+		B562F037D4736CC1272CA3C7FC1B9359 /* SYKit-tvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "SYKit-tvOS-Info.plist"; path = "../SYKit-tvOS/SYKit-tvOS-Info.plist"; sourceTree = "<group>"; };
+		B5648E3C197F33FF731D12DAFCF112C0 /* UIScrollView+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIScrollView+SYKit.swift"; sourceTree = "<group>"; };
 		B5AE30DEB29D1E491C8B2AA687E922C4 /* Pods-SYKitExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYKitExample-acknowledgements.plist"; sourceTree = "<group>"; };
 		B620CFA58549DF136FCEEB19A2DDD452 /* Pods-SYKitExampleTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYKitExampleTV.debug.xcconfig"; sourceTree = "<group>"; };
 		B712C7D27EB7CD8F8A18A3EDE52765C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B9C6B6D49E8F218C3C77154E18D62B54 /* UIDevice+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIDevice+SYKit.swift"; sourceTree = "<group>"; };
 		BB7686B3DD1F80A27E8031A2C3E756EF /* Pods-SYKitExampleTV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYKitExampleTV-dummy.m"; sourceTree = "<group>"; };
-		BC15AA009C7D59B49096C0145AE29D0B /* UIView+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIView+SYKit.swift"; sourceTree = "<group>"; };
-		C63B3288E29B87DE320618E46217E11F /* SYKit-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SYKit-tvOS-dummy.m"; path = "../SYKit-tvOS/SYKit-tvOS-dummy.m"; sourceTree = "<group>"; };
-		C7A75918FE8F7A3A1F5F7CD0EBD0BF9A /* SYKit-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SYKit-iOS-dummy.m"; sourceTree = "<group>"; };
+		C509F283CBD8F31D00F931F458624B51 /* SYKit-tvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SYKit-tvOS.modulemap"; path = "../SYKit-tvOS/SYKit-tvOS.modulemap"; sourceTree = "<group>"; };
 		C9273A8868F9FA869E1C6DC972347A44 /* Pods-SYKitExample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SYKitExample-frameworks.sh"; sourceTree = "<group>"; };
-		CD9C3025BC63B7A67B8C3E0B50E9A8A5 /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
 		D15B76BA03EE719AB5B23B93907FE1E3 /* Pods_SYKitExampleTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SYKitExampleTV.framework; path = "Pods-SYKitExampleTV.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2ABCD0B657CE259D0BB1539B7DA8227 /* UIImage+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+SYKit.swift"; sourceTree = "<group>"; };
 		D3604C9B00907E79E5436EBF18C67D73 /* Pods-SYKitExampleTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SYKitExampleTV.release.xcconfig"; sourceTree = "<group>"; };
 		D85F0CDB6977C052FA68C82D07D3E5FD /* Pods-SYKitExampleTV-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SYKitExampleTV-Info.plist"; sourceTree = "<group>"; };
+		D8E0AFD5C2F687EA64E7CBE0D18A4146 /* SYWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYWindow.swift; sourceTree = "<group>"; };
 		DAEEF168213340D0709502C8F247137F /* Pods-SYKitExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SYKitExample-dummy.m"; sourceTree = "<group>"; };
-		DD02373F5353DF98F1136374A5CC8970 /* UIScreen+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIScreen+SYKit.swift"; sourceTree = "<group>"; };
 		DF443978ACB0D10083ACEC38AA60DE77 /* Pods-SYKitExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SYKitExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DF765195EAA39CA8E396E092A646C127 /* Data+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Data+SYKit.swift"; sourceTree = "<group>"; };
-		E148D185EE5A34AC71E77B538A93B02B /* UIAlertController+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SYKit.swift"; sourceTree = "<group>"; };
-		F164A0928D9B7EAC53F5BD3AD30E9ACE /* SYScrollMaskView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYScrollMaskView.swift; sourceTree = "<group>"; };
-		F2841382FF162E2BD79D762FEB360764 /* SYKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SYKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F7642719C9894372C49B98F892CF85AC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		F94FED77CFA708FC54A06731A738A9C9 /* AVAsset+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "AVAsset+SYKit.swift"; sourceTree = "<group>"; };
-		FEAD0DDA82D2F39CA8CAF1084456482D /* SYDeviceModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYDeviceModel.swift; sourceTree = "<group>"; };
-		FF5DABA3D0A3A2E2765B15669827A259 /* SYShapeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SYShapeView.swift; sourceTree = "<group>"; };
+		E0FF5984F8D2A02392BD3CA504F975D7 /* CoreGraphics+SYKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CoreGraphics+SYKit.h"; sourceTree = "<group>"; };
+		E6193606ABAC3329CC1DC6ADAA9EBE67 /* SYKit-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SYKit-iOS.modulemap"; sourceTree = "<group>"; };
+		E7DDC3A998C29B0AE110918B9A1E3243 /* URL+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "URL+SYKit.swift"; sourceTree = "<group>"; };
+		EB01CA26211BCD8B6932A62D1F0054D7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F3B14E31C9FF818EFFC9C5831DE102F2 /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
+		F89FF893C1ED2F40532A42A47550F729 /* Data+SYKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Data+SYKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		09A46B53296E0429224222EF3B8C63D1 /* Frameworks */ = {
+		0012C8EFC0FA491F4A3B3CE4CAE357A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28F05933E43522E19C4A5635B68C1531 /* Foundation.framework in Frameworks */,
+				695840C44C295E8DC774963C996A00B9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +200,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D804B7E3384D8AB02AFD6A03C6A9DFC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C501A7F1417474AD71C7BA3221C3E300 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EC16083E234E7014B2EA524C4DBB9BA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,17 +216,66 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F239828BF7FA67314072FB6F21693E83 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9D765474051BCC8692BC84F0983C96A5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02746A693408D39CBEBA5786277D6BAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				67213A3FCC889608231405B268919846 /* Array+SYKit.swift */,
+				2AF189B469478BE2C6A1C1629D56AFF4 /* AVAsset+SYKit.swift */,
+				903E92039C2B6955C6747648803EAF01 /* Bundle+SYKit.swift */,
+				E0FF5984F8D2A02392BD3CA504F975D7 /* CoreGraphics+SYKit.h */,
+				0D952DE4A238F3BB0BF839BFF301CF4A /* CoreGraphics+SYKit.m */,
+				187EBC147C53FB0FB5BF52CF53172A34 /* CoreGraphics+SYKit.swift */,
+				F89FF893C1ED2F40532A42A47550F729 /* Data+SYKit.swift */,
+				4670FDF3321A088F7F946593E3579979 /* Date+SYKit.swift */,
+				303DD7BE46C984AF92DB202565D640D3 /* FileManager+SYKit.swift */,
+				32FF0110187A28D22F2CAA703A0BA35B /* NSAttributedString+SYKit.swift */,
+				060CFB3DA07C57FC42A6F0F82E6140AA /* NSObject+SYKit.h */,
+				9942630607C5E6E283F176639D9024C8 /* NSObject+SYKit.m */,
+				AA8D83927C92CD4D1629C301663FF939 /* NSObject+SYKit.swift */,
+				3D5B9B93B0F1485672DF91D60741A248 /* Optional+SYKit.swift */,
+				B331F483B0E1933A305AA787D59753BF /* String+SYKit.swift */,
+				4F5B2B94F2CF2E0FCE32B8818A71DBD4 /* UIAlertController+SYKit.swift */,
+				5A986ADE540DD017F8464860EFE8638E /* UIButton+SYKit.swift */,
+				69A40549E8B7A59171BC6C50C58FB7FE /* UICollectionView+SYKit.swift */,
+				20DD66F419721A7E2701560FF81398EF /* UIColor+SYKit.swift */,
+				B9C6B6D49E8F218C3C77154E18D62B54 /* UIDevice+SYKit.swift */,
+				4A4239E4E12ACE2A65863F40B98FA10B /* UIImage+SYKit.swift */,
+				4CB0657BF9013B42FEED5513CD3A8A93 /* UIScreen+SYKit.swift */,
+				B5648E3C197F33FF731D12DAFCF112C0 /* UIScrollView+SYKit.swift */,
+				81C845D36EABBC731DFA72AE7E906DD5 /* UISearchBar+SYKit.swift */,
+				2478EFEECDAFE421D7C0A80D6B002A65 /* UITableView+SYKit.swift */,
+				7051A4E5D4C2CD63D6C84BB777B5A3D3 /* UIView+SYKit.swift */,
+				6FF2F14AD5DC4B34EE0818E844120AA9 /* UIViewController+SYKit.swift */,
+				B231933E331705A4EFF6E3C4FD87D1C2 /* UIWindow+SYKit.swift */,
+				E7DDC3A998C29B0AE110918B9A1E3243 /* URL+SYKit.swift */,
+			);
+			name = Extensions;
+			path = SYKit/Extensions;
+			sourceTree = "<group>";
+		};
+		0C4938D0C3EB5866BB2A1E384C2D721F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6193606ABAC3329CC1DC6ADAA9EBE67 /* SYKit-iOS.modulemap */,
+				87F5AC239CC1A76B2CA756670F10FC59 /* SYKit-iOS.xcconfig */,
+				74108C4C1ABF7CB9ED493D6F7792B5AB /* SYKit-iOS-dummy.m */,
+				687BAABF1DF705DEDFF8D317CDE8EDE0 /* SYKit-iOS-Info.plist */,
+				A8088E1B7324DC25520ECDEA2BAC4F7B /* SYKit-iOS-prefix.pch */,
+				8B95DAB769D679836D727CDC4FA5211D /* SYKit-iOS-umbrella.h */,
+				C509F283CBD8F31D00F931F458624B51 /* SYKit-tvOS.modulemap */,
+				40FFB7B1C94CCD5C82985C641AEC771B /* SYKit-tvOS.xcconfig */,
+				27439D10D7DD061FDDDE6CF952185AA5 /* SYKit-tvOS-dummy.m */,
+				B562F037D4736CC1272CA3C7FC1B9359 /* SYKit-tvOS-Info.plist */,
+				6B7F06AFAEFD256B5C81D1D7E34ABA54 /* SYKit-tvOS-prefix.pch */,
+				645480E8CF0FE1D73F418D3DC40CCAC4 /* SYKit-tvOS-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Pods/Target Support Files/SYKit-iOS";
+			sourceTree = "<group>";
+		};
 		2A918136ADD15A197997448FCE79D1D9 /* Pods-SYKitExampleTV */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,36 +310,26 @@
 			path = "Target Support Files/Pods-SYKitExample";
 			sourceTree = "<group>";
 		};
-		63B86F4A74C3FA8E69263386F5DCFC2D /* Extensions */ = {
+		4F56339E068145E8C1228F923C4F9CDB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				31BD4384C25497937634A39EC68D18D1 /* Array+SYKit.swift */,
-				F94FED77CFA708FC54A06731A738A9C9 /* AVAsset+SYKit.swift */,
-				3E168C3657ABD69B9BF829C6E7C681D1 /* CoreGraphics+SYKit.h */,
-				3B0F85C64281A2F3E16414529DA05AEB /* CoreGraphics+SYKit.m */,
-				9011D62CE0AB1D72A09E86E1C1F018F3 /* CoreGraphics+SYKit.swift */,
-				DF765195EAA39CA8E396E092A646C127 /* Data+SYKit.swift */,
-				84158C74553D618543AE0C6C6128ECD2 /* NSAttributedString+SYKit.swift */,
-				8E620EFAA1C93128CC79B8ADE85B2C87 /* NSObject+SYKit.h */,
-				6BA6B146390BCB33231F7E6F8CCD88A9 /* NSObject+SYKit.m */,
-				6C81584FC450AA0031CD9513D58F8C17 /* NSObject+SYKit.swift */,
-				A46D4A2F99E090B657A071CB4824530F /* Optional+SYKit.swift */,
-				749E285CF9E347D6B088F73471DC4F74 /* String+SYKit.swift */,
-				E148D185EE5A34AC71E77B538A93B02B /* UIAlertController+SYKit.swift */,
-				584159616E2B6499035EE422BA1FCBEB /* UIButton+SYKit.swift */,
-				8B162C8618978D5447D2D02DD1DBDB13 /* UICollectionView+SYKit.swift */,
-				73F0439A3A58D72ECB315785C11830D8 /* UIColor+SYKit.swift */,
-				D2ABCD0B657CE259D0BB1539B7DA8227 /* UIImage+SYKit.swift */,
-				DD02373F5353DF98F1136374A5CC8970 /* UIScreen+SYKit.swift */,
-				B0B4597ACDFC5D54633BA41D72935980 /* UIScrollView+SYKit.swift */,
-				8ED7E3CA1015D996FC4C116C1F11164F /* UISearchBar+SYKit.swift */,
-				A3050F7256CA34F83457D45F54AA1CFF /* UITableView+SYKit.swift */,
-				BC15AA009C7D59B49096C0145AE29D0B /* UIView+SYKit.swift */,
-				8E86CA3992C045F1DCB5BDB4A2D5D5A7 /* UIViewController+SYKit.swift */,
-				A96956D47B054B4D9E513407ECA8A116 /* UIWindow+SYKit.swift */,
+				57739ACB94071FBD4F73855060007BB2 /* SYDeviceModel.swift */,
 			);
-			name = Extensions;
-			path = SYKit/Extensions;
+			name = Utilities;
+			path = SYKit/Utilities;
+			sourceTree = "<group>";
+		};
+		5EB135B205BD1E80445444637AED008F /* SYKit */ = {
+			isa = PBXGroup;
+			children = (
+				02746A693408D39CBEBA5786277D6BAF /* Extensions */,
+				AC38BEEB35A178AABD88276BC2418994 /* Pod */,
+				0C4938D0C3EB5866BB2A1E384C2D721F /* Support Files */,
+				4F56339E068145E8C1228F923C4F9CDB /* Utilities */,
+				D0D642CB84562E1FD46B41E944DB0C5E /* Views */,
+			);
+			name = SYKit;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		71BF10D9671F60B91D333968CED34958 /* tvOS */ = {
@@ -285,19 +347,6 @@
 				71BF10D9671F60B91D333968CED34958 /* tvOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8BE7A03C127F183575A565C99282DFA0 /* SYKit */ = {
-			isa = PBXGroup;
-			children = (
-				63B86F4A74C3FA8E69263386F5DCFC2D /* Extensions */,
-				E4803D8E9ADB9C324A634AFA0E1D51DB /* Pod */,
-				EF747A927A6C5C8B7A8A86D5C0126B7A /* Support Files */,
-				A952DC673834258A99E5FD295A7FE340 /* Utilities */,
-				A33C5F0C708B9FFD3CF4C0ABB87DD966 /* Views */,
-			);
-			name = SYKit;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		90D25D460446FFA46DB275D1C736B792 /* Products */ = {
@@ -319,31 +368,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		A33C5F0C708B9FFD3CF4C0ABB87DD966 /* Views */ = {
+		AC38BEEB35A178AABD88276BC2418994 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				8EE809D860935B84456F39F93609B6F6 /* SYGradientView.swift */,
-				F164A0928D9B7EAC53F5BD3AD30E9ACE /* SYScrollMaskView.swift */,
-				FF5DABA3D0A3A2E2765B15669827A259 /* SYShapeView.swift */,
-				6F8A50617BEAE9BA0F6FEC0792682ECB /* SYWindow.swift */,
+				F3B14E31C9FF818EFFC9C5831DE102F2 /* LICENSE.md */,
+				EB01CA26211BCD8B6932A62D1F0054D7 /* README.md */,
+				9DE045E890C43F5AFD930D913D071646 /* SYKit.podspec */,
 			);
-			name = Views;
-			path = SYKit/Views;
-			sourceTree = "<group>";
-		};
-		A952DC673834258A99E5FD295A7FE340 /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				FEAD0DDA82D2F39CA8CAF1084456482D /* SYDeviceModel.swift */,
-			);
-			name = Utilities;
-			path = SYKit/Utilities;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		ADFB531B6DBB872FC4EAE46939329B9E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8BE7A03C127F183575A565C99282DFA0 /* SYKit */,
+				5EB135B205BD1E80445444637AED008F /* SYKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -359,6 +397,18 @@
 			);
 			sourceTree = "<group>";
 		};
+		D0D642CB84562E1FD46B41E944DB0C5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84862324DC398DEDF316F7A7D6624BDF /* SYGradientView.swift */,
+				54D7A9AE3797748F684AFFFC01E1B5F8 /* SYScrollMaskView.swift */,
+				96A69088EA50D97458C49FA96B9873CE /* SYShapeView.swift */,
+				D8E0AFD5C2F687EA64E7CBE0D18A4146 /* SYWindow.swift */,
+			);
+			name = Views;
+			path = SYKit/Views;
+			sourceTree = "<group>";
+		};
 		D93EEA25014BCE43D014E76FBBEB6C41 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,36 +416,6 @@
 				2A918136ADD15A197997448FCE79D1D9 /* Pods-SYKitExampleTV */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		E4803D8E9ADB9C324A634AFA0E1D51DB /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				CD9C3025BC63B7A67B8C3E0B50E9A8A5 /* LICENSE.md */,
-				F7642719C9894372C49B98F892CF85AC /* README.md */,
-				F2841382FF162E2BD79D762FEB360764 /* SYKit.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		EF747A927A6C5C8B7A8A86D5C0126B7A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4AB66DEB7EE9DD1FB70FC62F7338F367 /* SYKit-iOS.modulemap */,
-				0A9128D1F4C3A738CEDA5E85E55F18A2 /* SYKit-iOS.xcconfig */,
-				C7A75918FE8F7A3A1F5F7CD0EBD0BF9A /* SYKit-iOS-dummy.m */,
-				6DF29C396F8230D24C32E71BD9E76BFB /* SYKit-iOS-Info.plist */,
-				8FCF15F0E36E185D7403101015E26FC4 /* SYKit-iOS-prefix.pch */,
-				8F55FA520432240EAAC49885CE9563E0 /* SYKit-iOS-umbrella.h */,
-				81F56677BD31F32B3F31A0A0486DB254 /* SYKit-tvOS.modulemap */,
-				B2F83EBC7EE648ED24540422B635EE21 /* SYKit-tvOS.xcconfig */,
-				C63B3288E29B87DE320618E46217E11F /* SYKit-tvOS-dummy.m */,
-				3B17CECB82022C1471947135B8CECC4C /* SYKit-tvOS-Info.plist */,
-				51856A2F2A394749C189DF7210C593B8 /* SYKit-tvOS-prefix.pch */,
-				0A78DA449BF60AE02B418592C2FE14D2 /* SYKit-tvOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Pods/Target Support Files/SYKit-iOS";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,31 +429,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4CF75672071999A89F00385597B7AC99 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				59538E2064546BC627A267E9EA236C13 /* CoreGraphics+SYKit.h in Headers */,
-				8F11C02CAE40CF32C24286675FBC8D77 /* NSObject+SYKit.h in Headers */,
-				08B7EE0CEBEC86B88AB96BF3F272CB43 /* SYKit-tvOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		65530874AA43CB1843DAD4936DFC51D0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				133E96503A0877C75C51C4C23E966C3E /* CoreGraphics+SYKit.h in Headers */,
-				A858A64255ACD74D3BF72B92EC3A0C9C /* NSObject+SYKit.h in Headers */,
-				540440479656F082991DFB02D74F447F /* SYKit-iOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B0DEFF70B769CFD06C8B53202908D38F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7A6523A29E32B1BB661FB97BE58527F3 /* Pods-SYKitExample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1A21083A2160F015BFD24D209455D71 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AC3471670CC6FF9F412A7C490B3C87 /* CoreGraphics+SYKit.h in Headers */,
+				0F2A0BB854E99EFD5322CAA23DCB1492 /* NSObject+SYKit.h in Headers */,
+				05679D645C6200365B0B6C38D45FF00C /* SYKit-tvOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDB3A6F47702F9D92F548E56F0EC31DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA47BF41033F291D16C9F42DE861E6C7 /* CoreGraphics+SYKit.h in Headers */,
+				68D12F9B9D8ADF7087E3445685ED6E70 /* NSObject+SYKit.h in Headers */,
+				F3FC6AB1A6AA410BEC8131AF55685384 /* SYKit-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,12 +481,12 @@
 		};
 		3610C4BD7CD5FCEA1CE4C84B7DFD3039 /* SYKit-tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E61A2085983AFB837234B94433CBD0C4 /* Build configuration list for PBXNativeTarget "SYKit-tvOS" */;
+			buildConfigurationList = 6BD3ADAFCCF53DE681A30181AFCC8C05 /* Build configuration list for PBXNativeTarget "SYKit-tvOS" */;
 			buildPhases = (
-				4CF75672071999A89F00385597B7AC99 /* Headers */,
-				D741031254DCE00007878176673B0788 /* Sources */,
-				F239828BF7FA67314072FB6F21693E83 /* Frameworks */,
-				368538FDB73C7A608C361E0EFCE46CF6 /* Resources */,
+				C1A21083A2160F015BFD24D209455D71 /* Headers */,
+				E1CF5FC7AE687CBDB77D13B06168FEE2 /* Sources */,
+				0012C8EFC0FA491F4A3B3CE4CAE357A9 /* Frameworks */,
+				203D11011F74DD15AD904FCDE408B963 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -498,12 +518,12 @@
 		};
 		CA2737E713F5DE4A0B0B687CBDA50FCC /* SYKit-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 31377CAF56D1095CCD17D6DFBFF7207D /* Build configuration list for PBXNativeTarget "SYKit-iOS" */;
+			buildConfigurationList = A986D31CDB0B301F0775A36589BF0D86 /* Build configuration list for PBXNativeTarget "SYKit-iOS" */;
 			buildPhases = (
-				65530874AA43CB1843DAD4936DFC51D0 /* Headers */,
-				769B06AA9CA4DFF38DF82F6ADED2F80D /* Sources */,
-				09A46B53296E0429224222EF3B8C63D1 /* Frameworks */,
-				7F25309B3F3F454BFD97ECD68CFF34C9 /* Resources */,
+				FDB3A6F47702F9D92F548E56F0EC31DA /* Headers */,
+				28D380D2DE386CB69989EC7941DB90FF /* Sources */,
+				D804B7E3384D8AB02AFD6A03C6A9DFC0 /* Frameworks */,
+				B4E0692576CC59A7BF0D04D487F3914B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -551,14 +571,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		368538FDB73C7A608C361E0EFCE46CF6 /* Resources */ = {
+		203D11011F74DD15AD904FCDE408B963 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F25309B3F3F454BFD97ECD68CFF34C9 /* Resources */ = {
+		B4E0692576CC59A7BF0D04D487F3914B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -575,46 +595,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		28D380D2DE386CB69989EC7941DB90FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F76C39DF6275ECDF1E9707AA00BB69 /* Array+SYKit.swift in Sources */,
+				FD2C7B2939D0DCAF4E2F554EE26AE614 /* AVAsset+SYKit.swift in Sources */,
+				24EA23327699124CC9252F2C910300C3 /* Bundle+SYKit.swift in Sources */,
+				63162F6F814CDE1B68417A31C68DBA84 /* CoreGraphics+SYKit.m in Sources */,
+				2C250881FE544FD3A6DCD95BE1861F6E /* CoreGraphics+SYKit.swift in Sources */,
+				2C5C49F895533B5412D4C1BA42EBB1D0 /* Data+SYKit.swift in Sources */,
+				4F0A8F2C6627DD454B2BF1F568E75441 /* Date+SYKit.swift in Sources */,
+				1FA163DA28A2F5D51E00292DEFE9D339 /* FileManager+SYKit.swift in Sources */,
+				D94A495120474296C75073CEAE868FA8 /* NSAttributedString+SYKit.swift in Sources */,
+				FF6BEBABB3B87FDF9D6D3636705252A7 /* NSObject+SYKit.m in Sources */,
+				E5816B4B3EAB3548B97A2F45CB67DC83 /* NSObject+SYKit.swift in Sources */,
+				B2DF93ADB2DF5BA6067033D43DA45C8C /* Optional+SYKit.swift in Sources */,
+				F7DC1A595FBFD6D9D62D70D27C69434D /* String+SYKit.swift in Sources */,
+				B3B645001D19E84EF05399D1044465BC /* SYDeviceModel.swift in Sources */,
+				26138329B7D0F536107D4C9F4CC02C7C /* SYGradientView.swift in Sources */,
+				CE4F418CFBB8DC023CBD16105FC0D778 /* SYKit-iOS-dummy.m in Sources */,
+				73EBA9E591532413FB114D64D1495731 /* SYScrollMaskView.swift in Sources */,
+				0B707F3C976FF37AF6C3442EF1BDA113 /* SYShapeView.swift in Sources */,
+				DFA681B48329857461B35031336AD5B1 /* SYWindow.swift in Sources */,
+				46A941144B79030DACFE54A7395661C4 /* UIAlertController+SYKit.swift in Sources */,
+				223A9C9DBF27A3F3F631AFB37CEE0D4F /* UIButton+SYKit.swift in Sources */,
+				8B9FDDFD81D35CB226157F29CAFFF295 /* UICollectionView+SYKit.swift in Sources */,
+				C2C4438D543DA9FB0AB81561E41C981D /* UIColor+SYKit.swift in Sources */,
+				87B946F48CEC35CA82E9C737AA3F695B /* UIDevice+SYKit.swift in Sources */,
+				7296D122E85C83D43DB4D31CDCDA4628 /* UIImage+SYKit.swift in Sources */,
+				D4C2DE97A36073D03E5EEBB982BACD85 /* UIScreen+SYKit.swift in Sources */,
+				BB2BDBA2902DDB66C4DBE73697BB5FFC /* UIScrollView+SYKit.swift in Sources */,
+				B5F1370BA65C834CB81D96C49B9B1C24 /* UISearchBar+SYKit.swift in Sources */,
+				60297D1C21CCB45BACAD6F52BC143E69 /* UITableView+SYKit.swift in Sources */,
+				07D4D2981EB3298AB5BABF9E7D042AD4 /* UIView+SYKit.swift in Sources */,
+				2B81617FF166B95BDED8602130EA65F1 /* UIViewController+SYKit.swift in Sources */,
+				78E9E15B44E89221C81F53DFA02E71DF /* UIWindow+SYKit.swift in Sources */,
+				368C6F393E58BB8D87BDBE2A092041D6 /* URL+SYKit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2D21701D5B140E21F021031BD30EA07F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8ACF2F13D31F2F06061D2DE05BF4CDD2 /* Pods-SYKitExampleTV-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		769B06AA9CA4DFF38DF82F6ADED2F80D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4B550EB8CB11E9FA5BF62B1C083C2C09 /* Array+SYKit.swift in Sources */,
-				D740E5CB5F0AB3FA6A4F51A34ED52CCD /* AVAsset+SYKit.swift in Sources */,
-				D8D678E75242F6BD59C44EF5D52AEB5B /* CoreGraphics+SYKit.m in Sources */,
-				56A07E7EFBF08036C817D73457C121B2 /* CoreGraphics+SYKit.swift in Sources */,
-				546BC7EF1A600F4BD032434C6EAA5EF2 /* Data+SYKit.swift in Sources */,
-				D7A32B156ACB54EB7332AF4A06CA54CB /* NSAttributedString+SYKit.swift in Sources */,
-				9C2277FD2FEE01BD5820FC8ACF180C97 /* NSObject+SYKit.m in Sources */,
-				F64C4108BBFCD69DCCF3CF8061EDBAEB /* NSObject+SYKit.swift in Sources */,
-				0A2C3A09F79280D1EFB79E4CC4CE27A4 /* Optional+SYKit.swift in Sources */,
-				72F95CB99F6F5EBFAC8D7E6BFC28CB92 /* String+SYKit.swift in Sources */,
-				6931D91F8E2A720F7F612DCA6AEE0A45 /* SYDeviceModel.swift in Sources */,
-				56700F53FA94E957F0BEDEFCDF61D778 /* SYGradientView.swift in Sources */,
-				E1B59AC3752BF1F83A0F07F5676F36A3 /* SYKit-iOS-dummy.m in Sources */,
-				16A033ED84F6D466671D4C47F639BF44 /* SYScrollMaskView.swift in Sources */,
-				7C91A894E4897CB756824B499AC5A03D /* SYShapeView.swift in Sources */,
-				CD0E077C1CD1A93E4205EB7405101DED /* SYWindow.swift in Sources */,
-				BDBA1900EA545FAE19DBF46E1C95768B /* UIAlertController+SYKit.swift in Sources */,
-				9A7658B8C2899B035F9DDA0EA79B0D76 /* UIButton+SYKit.swift in Sources */,
-				66CE27A3F6F70AF95ABF425015ED8525 /* UICollectionView+SYKit.swift in Sources */,
-				8317BB25B5C1867661E076B73A7475DD /* UIColor+SYKit.swift in Sources */,
-				55908EEC53588439E961974627B17568 /* UIImage+SYKit.swift in Sources */,
-				DCB35D183F9DF87BFCF0CA6FF75DC248 /* UIScreen+SYKit.swift in Sources */,
-				C3225BD6089E3F9039477D085E120B75 /* UIScrollView+SYKit.swift in Sources */,
-				574FDBB678C1746B2FDBCE3006376649 /* UISearchBar+SYKit.swift in Sources */,
-				3ED8969602D37CC86CB4E48AD474971A /* UITableView+SYKit.swift in Sources */,
-				CB4FE83A70E4A28CB8DB37F021C61A82 /* UIView+SYKit.swift in Sources */,
-				8C1B1949A18A0EE2E81D213F1848AE79 /* UIViewController+SYKit.swift in Sources */,
-				323DD72ADC416BFB446B05093DA9D08E /* UIWindow+SYKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,38 +651,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D741031254DCE00007878176673B0788 /* Sources */ = {
+		E1CF5FC7AE687CBDB77D13B06168FEE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BBDEAC737FA40D85B7352592679B196 /* Array+SYKit.swift in Sources */,
-				B7AD66CF3859614E038E23D3B3E76927 /* AVAsset+SYKit.swift in Sources */,
-				B9EA9A0C0CC4CAF2506377C0064CF378 /* CoreGraphics+SYKit.m in Sources */,
-				BA3B5A77320B47C95A8113B8D976C9C2 /* CoreGraphics+SYKit.swift in Sources */,
-				1274110F201C3408BF48207B170D99FB /* Data+SYKit.swift in Sources */,
-				519032143EBD2D4E747FED4F0E9FD981 /* NSAttributedString+SYKit.swift in Sources */,
-				84354D0974B6C31FB74AEBCB06630A8D /* NSObject+SYKit.m in Sources */,
-				C1AF7B80035E9A858905349290FC71CF /* NSObject+SYKit.swift in Sources */,
-				5C72C655A31B8B898D935FBA8A2E8029 /* Optional+SYKit.swift in Sources */,
-				1A17E3FE83079D7A116751F195FCC1F7 /* String+SYKit.swift in Sources */,
-				8A77872A3C4864B689DB4C6AC4ECBCB7 /* SYDeviceModel.swift in Sources */,
-				6D7C617D2FE83E4122E5A2ADCAC74AA8 /* SYGradientView.swift in Sources */,
-				BA973BB829F7AD9C918A2B3B04EC7EF5 /* SYKit-tvOS-dummy.m in Sources */,
-				955C4412531FA5598F4B0971E174963B /* SYScrollMaskView.swift in Sources */,
-				C03B1031230E9800827949D1F2E6AA83 /* SYShapeView.swift in Sources */,
-				80EDFC5383DEA91BE3870AF3E27C86AE /* SYWindow.swift in Sources */,
-				C1025B3F1AECF5547482A9707B02EE71 /* UIAlertController+SYKit.swift in Sources */,
-				047D113FFB5FA1D0FDAECC37E7B418DD /* UIButton+SYKit.swift in Sources */,
-				93F39A82423BF4C9C352A910DE3E13A2 /* UICollectionView+SYKit.swift in Sources */,
-				0751DF9465101A221B5030F8F303C893 /* UIColor+SYKit.swift in Sources */,
-				8C3FDD4D95C13898AA887D82741899FB /* UIImage+SYKit.swift in Sources */,
-				7EC4B99B00A4039B87CB5E4FAFB29705 /* UIScreen+SYKit.swift in Sources */,
-				AC2C22BFB996A407CB625462B40EDD5E /* UIScrollView+SYKit.swift in Sources */,
-				611CF63B6012B8CB2F3F5CC1B4CBB1BA /* UISearchBar+SYKit.swift in Sources */,
-				AAD19D3FEC9A3548D49C47033D13479C /* UITableView+SYKit.swift in Sources */,
-				E884B1D4287862D9F5531962C0D07EA1 /* UIView+SYKit.swift in Sources */,
-				3A043FC7BDF8C61BCAD8E509A73C4F7A /* UIViewController+SYKit.swift in Sources */,
-				36E735E0838C8FA4AE58A448B5EB8F94 /* UIWindow+SYKit.swift in Sources */,
+				BFC27FDCA1D17FBA4D08A2FC3DA39086 /* Array+SYKit.swift in Sources */,
+				CEDC844C6D293D35F7FCA8960FEC56D5 /* AVAsset+SYKit.swift in Sources */,
+				8A34F8AC4518F3C94C2AFA01CCC5AA72 /* Bundle+SYKit.swift in Sources */,
+				D131D1EE75A5C6D988E9389E383B479A /* CoreGraphics+SYKit.m in Sources */,
+				A8190BDC73D6EE923231271BC9A81B49 /* CoreGraphics+SYKit.swift in Sources */,
+				68840A986E60CA48D498DC30595ABA05 /* Data+SYKit.swift in Sources */,
+				10AD36136FB6C6E0B2A3ECD943BB5EF1 /* Date+SYKit.swift in Sources */,
+				4DBF71C6F485FA64A968D89E7245AB3D /* FileManager+SYKit.swift in Sources */,
+				724C2550232016CDA63FCB1A5B093BE2 /* NSAttributedString+SYKit.swift in Sources */,
+				890EDCD3CB031AFA328BDA6F494DFA11 /* NSObject+SYKit.m in Sources */,
+				738B43675E758008CE378C849351E3DB /* NSObject+SYKit.swift in Sources */,
+				86E18D0068177C723654751C885E4256 /* Optional+SYKit.swift in Sources */,
+				38738AB44BD20C1144E8B7C3937681E7 /* String+SYKit.swift in Sources */,
+				6A3BA0FAAFF812345ADB6A1142B3220C /* SYDeviceModel.swift in Sources */,
+				E5307192867F8045C4C6E2105E9B5991 /* SYGradientView.swift in Sources */,
+				7E503449B86357820DE5031889F3B6F0 /* SYKit-tvOS-dummy.m in Sources */,
+				FFBF32184538C8877BDECE7EAEC3E188 /* SYScrollMaskView.swift in Sources */,
+				B6A297436CA36D438B54082FB1FF4441 /* SYShapeView.swift in Sources */,
+				FEB4BFEEA4CA962EF0CE4F099631E595 /* SYWindow.swift in Sources */,
+				979F902E115C50BCE0BEBB7EEFD23D27 /* UIAlertController+SYKit.swift in Sources */,
+				E059CEB40F4FE852C8F980767C79A646 /* UIButton+SYKit.swift in Sources */,
+				6317FADD28C2156E242B9CFA7033DBB7 /* UICollectionView+SYKit.swift in Sources */,
+				E97585E3B38E5A4922305EB5257C782F /* UIColor+SYKit.swift in Sources */,
+				1113EB4010FBF1E6DBBC7983F6F8B011 /* UIDevice+SYKit.swift in Sources */,
+				1E5327FFCF1D17C075227E9DF43BFB67 /* UIImage+SYKit.swift in Sources */,
+				B3ED9B9C62085E4CB9FC241C8361B306 /* UIScreen+SYKit.swift in Sources */,
+				41FEC8F6BF842EF8261522F315A80AB2 /* UIScrollView+SYKit.swift in Sources */,
+				E6BB40BB73308E8E227D8CC72F4F0087 /* UISearchBar+SYKit.swift in Sources */,
+				8ECD0786B9824848DE0EEEE8FBF7BB33 /* UITableView+SYKit.swift in Sources */,
+				457D7299F9A346673592C1659655DACC /* UIView+SYKit.swift in Sources */,
+				6F6A238000F581B2FB9DDE02DFF992BA /* UIViewController+SYKit.swift in Sources */,
+				1B53CDE6EA68FF6080B33BDED8FF80A2 /* UIWindow+SYKit.swift in Sources */,
+				E228BD84FA9486D14AB2C5807BB1DDF6 /* URL+SYKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -853,6 +883,42 @@
 			};
 			name = Release;
 		};
+		6FDDB2527AC9DB1A732220C2FC59D04F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40FFB7B1C94CCD5C82985C641AEC771B /* SYKit-tvOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SYKit-tvOS/SYKit-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SYKit-tvOS/SYKit-tvOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SYKit-tvOS/SYKit-tvOS.modulemap";
+				PRODUCT_MODULE_NAME = SYKit;
+				PRODUCT_NAME = SYKit;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		7D91118FE72B6228C6580F26FB60F1E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -918,80 +984,9 @@
 			};
 			name = Debug;
 		};
-		81A6843F69ED80AE6EB3783C92966205 /* Debug */ = {
+		9C583F875D2A28B6958794809DE01E4B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2F83EBC7EE648ED24540422B635EE21 /* SYKit-tvOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SYKit-tvOS/SYKit-tvOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SYKit-tvOS/SYKit-tvOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SYKit-tvOS/SYKit-tvOS.modulemap";
-				PRODUCT_MODULE_NAME = SYKit;
-				PRODUCT_NAME = SYKit;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		830C01DF367246785DB68886D0C57063 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2F83EBC7EE648ED24540422B635EE21 /* SYKit-tvOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SYKit-tvOS/SYKit-tvOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SYKit-tvOS/SYKit-tvOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SYKit-tvOS/SYKit-tvOS.modulemap";
-				PRODUCT_MODULE_NAME = SYKit;
-				PRODUCT_NAME = SYKit;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B181A8F9BCBF99563E292F50092B74A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A9128D1F4C3A738CEDA5E85E55F18A2 /* SYKit-iOS.xcconfig */;
+			baseConfigurationReference = 87F5AC239CC1A76B2CA756670F10FC59 /* SYKit-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1023,6 +1018,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		AD7B3F8332C05AAA5BD650E575BDB892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87F5AC239CC1A76B2CA756670F10FC59 /* SYKit-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SYKit-iOS/SYKit-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SYKit-iOS/SYKit-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SYKit-iOS/SYKit-iOS.modulemap";
+				PRODUCT_MODULE_NAME = SYKit;
+				PRODUCT_NAME = SYKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		BA8D63BD87F1E3B7522596E907489216 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1061,9 +1092,9 @@
 			};
 			name = Debug;
 		};
-		BF1BBDDBDE8E6B194C260C142E18C4D3 /* Release */ = {
+		D37B5A1072D10D41C8ADF0DDB6E340E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A9128D1F4C3A738CEDA5E85E55F18A2 /* SYKit-iOS.xcconfig */;
+			baseConfigurationReference = 40FFB7B1C94CCD5C82985C641AEC771B /* SYKit-tvOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1074,41 +1105,31 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SYKit-iOS/SYKit-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SYKit-iOS/SYKit-iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SYKit-tvOS/SYKit-tvOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SYKit-tvOS/SYKit-tvOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SYKit-iOS/SYKit-iOS.modulemap";
+				MODULEMAP_FILE = "Target Support Files/SYKit-tvOS/SYKit-tvOS.modulemap";
 				PRODUCT_MODULE_NAME = SYKit;
 				PRODUCT_NAME = SYKit;
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		31377CAF56D1095CCD17D6DFBFF7207D /* Build configuration list for PBXNativeTarget "SYKit-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B181A8F9BCBF99563E292F50092B74A5 /* Debug */,
-				BF1BBDDBDE8E6B194C260C142E18C4D3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1127,6 +1148,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6BD3ADAFCCF53DE681A30181AFCC8C05 /* Build configuration list for PBXNativeTarget "SYKit-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37B5A1072D10D41C8ADF0DDB6E340E2 /* Debug */,
+				6FDDB2527AC9DB1A732220C2FC59D04F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7391F387F769E54EA6DBBD3751456F97 /* Build configuration list for PBXNativeTarget "Pods-SYKitExampleTV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1136,11 +1166,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E61A2085983AFB837234B94433CBD0C4 /* Build configuration list for PBXNativeTarget "SYKit-tvOS" */ = {
+		A986D31CDB0B301F0775A36589BF0D86 /* Build configuration list for PBXNativeTarget "SYKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				81A6843F69ED80AE6EB3783C92966205 /* Debug */,
-				830C01DF367246785DB68886D0C57063 /* Release */,
+				9C583F875D2A28B6958794809DE01E4B /* Debug */,
+				AD7B3F8332C05AAA5BD650E575BDB892 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
