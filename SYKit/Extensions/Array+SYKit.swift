@@ -9,7 +9,7 @@
 import Foundation
 
 public extension Array where Element : Equatable {
-    mutating func remove(element: Element) {
+    mutating func remove(_ element: Element) {
         while let index = self.firstIndex(of: element) {
             self.remove(at: index)
         }
