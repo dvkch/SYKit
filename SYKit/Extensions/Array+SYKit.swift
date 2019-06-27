@@ -22,6 +22,7 @@ public extension Array where Element : Equatable {
         }
         return self[index + 1]
     }
+
 }
 
 public extension Collection {
@@ -37,6 +38,12 @@ public extension Collection {
 public extension Array where Element : OptionalType {
     func removingNils() -> [Element.Wrapped] {
         return compactMap { $0.value }
+    }
+}
+
+public extension Array {
+    func element(at index: Index, `default`: Element? = nil) -> Element? {
+        return index < count ? self[index] : `default`
     }
 }
 

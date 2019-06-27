@@ -12,8 +12,8 @@ import UIKit
 public class SYWindow: UIWindow {
     
     public var alternateAnimationSpeed: Float = 0.05
-    public var enableSlowAnimationsOnShake: Bool = true
-    
+    public var enableSlowAnimationsOnShake: Bool = false
+
     public func toggleAnimations() {
         if layer.speed == 1 {
             print("SYWindow: enabling slow animations")
