@@ -12,6 +12,7 @@
 		9773085722C4CD3E0029964C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E6E01022C3CC9800A8335A /* AppDelegate.swift */; };
 		9773085822C4CD3E0029964C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E6E01222C3CC9800A8335A /* ViewController.swift */; };
 		9773085922C4CD430029964C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E6E01722C3CC9900A8335A /* Assets.xcassets */; };
+		979E627322C4FEC900F194F9 /* ObjectiveCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 979E627222C4FEC900F194F9 /* ObjectiveCTest.m */; };
 		97E6E01122C3CC9800A8335A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E6E01022C3CC9800A8335A /* AppDelegate.swift */; };
 		97E6E01322C3CC9800A8335A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E6E01222C3CC9800A8335A /* ViewController.swift */; };
 		97E6E01822C3CC9900A8335A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97E6E01722C3CC9900A8335A /* Assets.xcassets */; };
@@ -25,6 +26,9 @@
 		89D6595DB1103CA7FA7DC722 /* Pods_SYKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9794787522C4AD7200EEA934 /* SYKitExampleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYKitExampleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9794788022C4AD7300EEA934 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		979E627022C4FEC900F194F9 /* SYKitExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SYKitExample-Bridging-Header.h"; sourceTree = "<group>"; };
+		979E627122C4FEC900F194F9 /* ObjectiveCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjectiveCTest.h; sourceTree = "<group>"; };
+		979E627222C4FEC900F194F9 /* ObjectiveCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveCTest.m; sourceTree = "<group>"; };
 		97E6E00D22C3CC9800A8335A /* SYKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97E6E01022C3CC9800A8335A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		97E6E01222C3CC9800A8335A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,10 +103,13 @@
 			children = (
 				97E6E01022C3CC9800A8335A /* AppDelegate.swift */,
 				97E6E01222C3CC9800A8335A /* ViewController.swift */,
+				979E627122C4FEC900F194F9 /* ObjectiveCTest.h */,
+				979E627222C4FEC900F194F9 /* ObjectiveCTest.m */,
 				97E6E01722C3CC9900A8335A /* Assets.xcassets */,
 				97E6E01922C3CC9900A8335A /* LaunchScreen-iOS.storyboard */,
 				97E6E01C22C3CC9900A8335A /* Info-iOS.plist */,
 				9794788022C4AD7300EEA934 /* Info-tvOS.plist */,
+				979E627022C4FEC900F194F9 /* SYKitExample-Bridging-Header.h */,
 			);
 			path = SYKitExample;
 			sourceTree = "<group>";
@@ -165,6 +172,7 @@
 					};
 					97E6E00C22C3CC9800A8335A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -338,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				979E627322C4FEC900F194F9 /* ObjectiveCTest.m in Sources */,
 				97E6E01322C3CC9800A8335A /* ViewController.swift in Sources */,
 				97E6E01122C3CC9800A8335A /* AppDelegate.swift in Sources */,
 			);
@@ -522,6 +531,7 @@
 			baseConfigurationReference = 369028B6C563DC4887CD8226 /* Pods-SYKitExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon iOS";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79RY8264V4;
 				INFOPLIST_FILE = "SYKitExample/Info-iOS.plist";
@@ -531,6 +541,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.SYKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SYKitExample/SYKitExample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -541,6 +553,7 @@
 			baseConfigurationReference = 454DCDDCB986DFD498065A2F /* Pods-SYKitExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon iOS";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79RY8264V4;
 				INFOPLIST_FILE = "SYKitExample/Info-iOS.plist";
@@ -550,6 +563,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.SYKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SYKitExample/SYKitExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

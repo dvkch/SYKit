@@ -52,7 +52,7 @@ public extension NSAttributedString {
 
 public extension NSMutableAttributedString {
     @objc(trimCharactersIn:)
-    public func trimCharacters(in charSet: CharacterSet) {
+    func trimCharacters(in charSet: CharacterSet) {
         var range = (string as NSString).rangeOfCharacter(from: charSet)
         
         // Trim leading characters from character set.

@@ -10,8 +10,8 @@ import UIKit
 public extension UIView {
 
     @objc(sy_findSubviewsOfClass:recursive:)
-    private func objcSubviews(ofKind clazz: AnyClass, recursive: Bool) -> [UIView] {
-        // TODO: test
+    @available(swift, obsoleted: 1.0)
+    func objc_subviews(ofKind clazz: AnyClass, recursive: Bool) -> [UIView] {
         guard let t = clazz as? UIView.Type else { return [] }
         return subviews(ofKind: t, recursive: recursive)
     }
@@ -20,7 +20,8 @@ public extension UIView {
         var result = [T]()
         
         for subview in subviews {
-            if let subview = subview as? T {
+            // need to do both tests, because when calling from objc_subviews(ofKing:recursive:) we will have clazz of the requested type, but T will UIView
+            if subview.isKind(of: clazz), let subview = subview as? T {
                 result.append(subview)
             }
             

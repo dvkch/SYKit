@@ -13,18 +13,18 @@ import ImageIO
 @objc public extension UIImage {
     
     @objc(sy_hasAlpha)
-    public var hasAlpha: Bool {
+    var hasAlpha: Bool {
         // https://github.com/mbcharbonneau/UIImage-Categories/blob/master/UIImage%2BAlpha.m
         guard let info = self.cgImage?.alphaInfo else { return false }
         return info == .first || info == .last || info == .alphaOnly || info == .premultipliedFirst || info == .premultipliedLast
     }
     
     @objc(sy_sizeOfImageAtURL:)
-    public static func sizeOfImageOBJC(at url: URL) -> CGSize {
+    static func sizeOfImageOBJC(at url: URL) -> CGSize {
         return self.sizeOfImage(at: url) ?? .zero
     }
     
-    @nonobjc public static func sizeOfImage(at url: URL) -> CGSize? {
+    @nonobjc static func sizeOfImage(at url: URL) -> CGSize? {
         // http://oleb.net/blog/2011/09/accessing-image-properties-without-loading-the-image-into-memory/
         guard let source = CGImageSourceCreateWithURL(url as CFURL, nil) else { return nil }
         
@@ -41,7 +41,7 @@ import ImageIO
     }
 
     @objc(sy_thumbnailForImageAtURL:maxEdgeSize:)
-    public static func thumbnailForImage(at url: URL, maxEdgeSize: CGFloat) -> UIImage? {
+    static func thumbnailForImage(at url: URL, maxEdgeSize: CGFloat) -> UIImage? {
         // http://stackoverflow.com/a/5860390/1439489
         guard let source = CGImageSourceCreateWithURL(url as CFURL, nil) else { return nil }
 
@@ -60,12 +60,12 @@ import ImageIO
 @objc public extension UIImage {
     
     @objc(sy_imageWithColor:)
-    public convenience init?(color: UIColor?) {
+    convenience init?(color: UIColor?) {
         self.init(color: color, size: CGSize(width: 1, height: 1), cornerRadius: 0)
     }
     
     @objc(sy_imageWithColor:size:cornerRadius:)
-    public convenience init?(color: UIColor?, size: CGSize = CGSize(width: 1, height: 1), cornerRadius: CGFloat = 0) {
+    convenience init?(color: UIColor?, size: CGSize = CGSize(width: 1, height: 1), cornerRadius: CGFloat = 0) {
         guard let color = color else { return nil }
         
         let rect = CGRect(origin: .zero, size: size)
@@ -85,7 +85,7 @@ import ImageIO
 @objc public extension UIImage {
 
     @objc(sy_addingPaddingWithTop:left:right:bottom:)
-    public func addingPadding(top: CGFloat = 0, left: CGFloat = 0, right: CGFloat = 0, bottom: CGFloat = 0) -> UIImage? {
+    func addingPadding(top: CGFloat = 0, left: CGFloat = 0, right: CGFloat = 0, bottom: CGFloat = 0) -> UIImage? {
         var size = self.size
         size.width += left + right
         size.height += top + bottom
@@ -97,7 +97,7 @@ import ImageIO
     }
     
     @objc(sy_resizingToSize:)
-    public func resizing(to size: CGSize) -> UIImage? {
+    func resizing(to size: CGSize) -> UIImage? {
         // http://www.lukaszielinski.de/blog/posts/2014/01/21/ios-how-to-resize-and-rotate-uiimages-in-a-thread-safe-fashion/
         guard let cgImage = self.cgImage, let colorSpace = cgImage.colorSpace else { return nil }
         
@@ -121,17 +121,17 @@ import ImageIO
     }
 
     @objc(sy_resizingWidthTo:)
-    public func resizingWidth(to width: CGFloat) -> UIImage? {
+    func resizingWidth(to width: CGFloat) -> UIImage? {
         return self.resizing(to: CGSize(width: width, height: size.height * width / size.width))
     }
     
     @objc(sy_resizingHeightTo:)
-    public func resizingHeight(to height: CGFloat) -> UIImage? {
+    func resizingHeight(to height: CGFloat) -> UIImage? {
         return self.resizing(to: CGSize(width: size.width * height / size.height, height: height))
     }
     
     @objc(sy_resizingLongestEdgeTo:)
-    public func resizingLongestEdge(to size: CGFloat) -> UIImage? {
+    func resizingLongestEdge(to size: CGFloat) -> UIImage? {
         if self.size.width > self.size.height {
             return resizingWidth(to: size)
         } else {
@@ -140,7 +140,7 @@ import ImageIO
     }
     
     @objc(sy_maskingWithColor:)
-    public func masking(with color: UIColor) -> UIImage? {
+    func masking(with color: UIColor) -> UIImage? {
         guard let cgImage = self.cgImage else { return nil }
         let rect = CGRect(origin: .zero, size: size)
         
@@ -157,7 +157,7 @@ import ImageIO
     }
     
     @objc(sy_rotatingToDegrees:)
-    public func rotating(degrees: CGFloat) -> UIImage? {
+    func rotating(degrees: CGFloat) -> UIImage? {
         // http://www.lukaszielinski.de/blog/posts/2014/01/21/ios-how-to-resize-and-rotate-uiimages-in-a-thread-safe-fashion/
         guard let cgImage = self.cgImage, let colorSpace = cgImage.colorSpace else { return nil }
         
@@ -207,7 +207,7 @@ import ImageIO
     }
     
     @objc(UIImageGreyscaleFilter)
-    public enum GreyscaleFilter: Int {
+    enum GreyscaleFilter: Int {
         case noir, mono, tonal
         public var filterName: String {
             switch self {
@@ -218,7 +218,6 @@ import ImageIO
         }
     }
     
-    // TODO: test in ObjC
     @objc(sy_applyingGreyscaleFilter:)
     func greyscale(using filter: GreyscaleFilter) -> UIImage? {
         guard let filter = CIFilter(name: filter.filterName) else { return nil }

@@ -9,6 +9,9 @@ import UIKit
 
 @objc
 public enum SYDeviceModel: Int, CaseIterable {
+    // unknown
+    case unknown
+    
     // Simulator
     case simulator32bits
     case simulator64bits
@@ -86,6 +89,8 @@ public enum SYDeviceModel: Int, CaseIterable {
     
     var hardwareStrings: [String] {
         switch self {
+        case .unknown:          return []
+            
         case .simulator32bits:  return ["i386"]
         case .simulator64bits:  return ["x86_64"]
             
@@ -166,31 +171,42 @@ public enum SYDeviceModel: Int, CaseIterable {
 
 // ObjC bridge
 @objcMembers
-private class SYDevice: NSObject {
+@available(swift, obsoleted: 1.0)
+public class SYDevice: NSObject {
     
     // MARK: Init
-    init(model: SYDeviceModel) {
+    public init(model: SYDeviceModel) {
         self.model = model
     }
     
-    init?(hardwareString: String) {
+    public init?(hardwareString: String) {
         guard let model = SYDeviceModel(hardwareString: hardwareString) else { return nil }
         self.model = model
     }
     
     // MARK: Properties
-    let model: SYDeviceModel
+    public let model: SYDeviceModel
+    public var hardwareStrings: [String] {
+        return model.hardwareStrings
+    }
 }
 
 public extension UIDevice {
+    @objc(sy_hardwareString)
     var hardwareString: String {
         var sysinfo = utsname()
         uname(&sysinfo)
         return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
     }
     
-    var model: SYDeviceModel? {
+    @nonobjc
+    var modelEnum: SYDeviceModel? {
         return SYDeviceModel(hardwareString: hardwareString)
+    }
+    
+    @objc(sy_modelEnum)
+    var objc_modelEnum: SYDeviceModel {
+        return SYDeviceModel(hardwareString: hardwareString) ?? .unknown
     }
 }
 

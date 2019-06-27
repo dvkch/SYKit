@@ -12,7 +12,7 @@ import UIKit
 public extension UIColor {
     
     @objc(sy_alpha)
-    public var alpha: CGFloat {
+    var alpha: CGFloat {
         // https://github.com/mbcharbonneau/UIImage-Categories/blob/master/UIImage%2BAlpha.m
         var alpha: CGFloat = 0
         if getRed(nil, green: nil, blue: nil, alpha: &alpha) {
