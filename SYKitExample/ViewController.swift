@@ -50,6 +50,12 @@ class ViewController: UIViewController {
         _ = UIScrollView().sy_refreshControl
         
         ObjectiveCTest.testObjCExclusivesBridgings()
+        
+        // test boxing
+        let attrString = NSAttributedString(string: "TEST STRING", font: UIFont.boldSystemFont(ofSize: 19), color: .red)
+        let data = try! PropertyListEncoder().encode(SYArchiverBox(attrString))
+        let decodedAttrString = try! PropertyListDecoder().decode(SYArchiverBox<NSAttributedString>.self, from: data).value
+        print("Decoded:", decodedAttrString)
     }
     
     func swiftCompilationTest() {

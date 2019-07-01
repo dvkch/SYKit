@@ -1,5 +1,5 @@
 PODS:
-  - SYKit (0.1.8)
+  - SYKit (0.1.9)
 
 DEPENDENCIES:
   - SYKit (from `./`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  SYKit: 2f712c509af9d8e6f5109dd5b708606bb42a3839
+  SYKit: 16bf365d808db259dff3e17057242e40c000f554
 
 PODFILE CHECKSUM: e88432a5a0346d5d2284ffcd94bc343eb9ba5f3b
 
