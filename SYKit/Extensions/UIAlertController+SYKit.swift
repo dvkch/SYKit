@@ -47,20 +47,10 @@ extension UIAlertController {
 extension UIAlertAction {
     @objc(sy_updateTitle:)
     public func updateTitle(_ title: String) {
-        do {
-            setValue(title, forKey: "title")
-        }
-        catch {
-            print("Updating UIAlertAction title caused an error", error)
-        }
+        setValue(title, forKey: "title")
     }
     public func updateImaeg(_ image: UIImage?) {
-        do {
-            setValue(image, forKey: "image")
-        }
-        catch {
-            print("Updating UIAlertAction image caused an error", error)
-        }
+        setValue(image, forKey: "image")
     }
 }
 
