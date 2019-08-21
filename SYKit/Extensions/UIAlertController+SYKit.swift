@@ -9,18 +9,21 @@
 import UIKit
 
 @available(iOS 8.0, tvOS 9.0, *)
-public extension UIAlertController {
+extension UIAlertController {
     
     @discardableResult
-    @objc(sy_addActionWithTitle:style:handler:)
-    func addAction(title: String?, style: UIAlertAction.Style, handler: ((UIAlertAction) -> ())?) -> UIAlertAction {
+    @objc(sy_addActionWithTitle:image:style:handler:)
+    public func addAction(title: String?, image: UIImage? = nil, style: UIAlertAction.Style, handler: ((UIAlertAction) -> ())?) -> UIAlertAction {
         let action = UIAlertAction(title: title, style: style, handler: handler)
+        if let image = image {
+            action.updateImaeg(image)
+        }
         self.addAction(action)
         return action
     }
-
+    
     @objc(sy_setContentViewController:height:)
-    func setContentViewController(_ contentVC: UIViewController?, height: CGFloat = -1) {
+    public func setContentViewController(_ contentVC: UIViewController?, height: CGFloat = -1) {
         setValue(contentVC, forKey: "contentViewController")
         
         if contentVC != nil, height > 0 {
@@ -28,10 +31,10 @@ public extension UIAlertController {
             preferredContentSize.height = height
         }
     }
-
+    
     @discardableResult
     @objc(sy_setupImageViewWithImage:height:margins:)
-    func setupImageView(image: UIImage?, height: CGFloat, margins: UIEdgeInsets = .zero) -> UIImageView {
+    public func setupImageView(image: UIImage?, height: CGFloat, margins: UIEdgeInsets = .zero) -> UIImageView {
         let vc = SYImageViewController()
         vc.imageView.image = image
         vc.imageViewMargins = margins
@@ -41,10 +44,23 @@ public extension UIAlertController {
 }
 
 @available(iOS 8.0, tvOS 9.0, *)
-public extension UIAlertAction {
+extension UIAlertAction {
     @objc(sy_updateTitle:)
-    func updateTitle(_ title: String) {
-        setValue(title, forKey: "title")
+    public func updateTitle(_ title: String) {
+        do {
+            setValue(title, forKey: "title")
+        }
+        catch {
+            print("Updating UIAlertAction title caused an error", error)
+        }
+    }
+    public func updateImaeg(_ image: UIImage?) {
+        do {
+            setValue(image, forKey: "image")
+        }
+        catch {
+            print("Updating UIAlertAction image caused an error", error)
+        }
     }
 }
 
