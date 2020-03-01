@@ -26,6 +26,7 @@
 		369028B6C563DC4887CD8226 /* Pods-SYKitExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYKitExample.debug.xcconfig"; path = "Target Support Files/Pods-SYKitExample/Pods-SYKitExample.debug.xcconfig"; sourceTree = "<group>"; };
 		454DCDDCB986DFD498065A2F /* Pods-SYKitExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYKitExample.release.xcconfig"; path = "Target Support Files/Pods-SYKitExample/Pods-SYKitExample.release.xcconfig"; sourceTree = "<group>"; };
 		89D6595DB1103CA7FA7DC722 /* Pods_SYKitExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SYKitExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		976E423E23D21C6A00FFEFD0 /* SYKitExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SYKitExample.entitlements; sourceTree = "<group>"; };
 		9794787522C4AD7200EEA934 /* SYKitExampleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SYKitExampleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9794788022C4AD7300EEA934 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		979E627022C4FEC900F194F9 /* SYKitExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SYKitExample-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -104,6 +105,7 @@
 		97E6E00F22C3CC9800A8335A /* SYKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				976E423E23D21C6A00FFEFD0 /* SYKitExample.entitlements */,
 				97E6E01022C3CC9800A8335A /* AppDelegate.swift */,
 				97E6E01222C3CC9800A8335A /* ViewController.swift */,
 				97E7038622C53770005BBCDC /* ViewController.xib */,
@@ -540,7 +542,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon iOS";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SYKitExample/SYKitExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 79RY8264V4;
 				INFOPLIST_FILE = "SYKitExample/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -549,6 +553,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.SYKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "SYKitExample/SYKitExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -562,7 +567,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon iOS";
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SYKitExample/SYKitExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 79RY8264V4;
 				INFOPLIST_FILE = "SYKitExample/Info-iOS.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -571,6 +578,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.syan.SYKitExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "SYKitExample/SYKitExample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
