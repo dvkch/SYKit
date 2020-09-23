@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        window = UIWindow.mainWindow(rootViewController: ViewController())
+        if #available(iOS 13.0, tvOS 13.0, *) {
+            window = UIWindow.mainWindow(windowScene: nil, rootViewController: ViewController())
+        }
+        else {
+            window = UIWindow.mainWindow(rootViewController: ViewController())
+        }
         return true
     }
 }

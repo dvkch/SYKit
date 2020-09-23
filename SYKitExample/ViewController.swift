@@ -47,7 +47,9 @@ class ViewController: UIViewController {
         print(UIDevice.current.model, UIDevice.current.localizedModel)
         print("Swift:", UIDevice.current.modelEnum?.rawValue ?? "", UIDevice.current.hardwareString)
         
+        #if os(iOS)
         _ = UIScrollView().sy_refreshControl
+        #endif
         
         ObjectiveCTest.testObjCExclusivesBridgings()
         
