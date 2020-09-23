@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target  = '8.0'
   s.tvos.deployment_target = '9.0'
   s.name     = 'SYKit'
-  s.version  = '0.1.14'
+  s.version  = '0.1.15'
   s.license  = 'Custom'
   s.summary  = 'UIKit and Foundation tools'
   s.homepage = 'https://github.com/dvkch/SYKit'
