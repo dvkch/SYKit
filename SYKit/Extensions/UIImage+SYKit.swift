@@ -40,13 +40,14 @@ import ImageIO
         return nil
     }
 
-    @objc(sy_thumbnailForImageAtURL:maxEdgeSize:)
-    static func thumbnailForImage(at url: URL, maxEdgeSize: CGFloat) -> UIImage? {
+    @objc(sy_thumbnailForImageAtURL:maxEdgeSize:alwaysCreate:)
+    static func thumbnailForImage(at url: URL, maxEdgeSize: CGFloat, alwaysCreate: Bool) -> UIImage? {
         // http://stackoverflow.com/a/5860390/1439489
         guard let source = CGImageSourceCreateWithURL(url as CFURL, nil) else { return nil }
 
         let options = [
-            kCGImageSourceCreateThumbnailFromImageIfAbsent: kCFBooleanTrue,
+            kCGImageSourceCreateThumbnailFromImageAlways: kCFBooleanTrue,
+            kCGImageSourceCreateThumbnailFromImageIfAbsent: alwaysCreate ? kCFBooleanTrue : kCFBooleanFalse,
             kCGImageSourceCreateThumbnailWithTransform: kCFBooleanTrue,
             kCGImageSourceThumbnailMaxPixelSize: maxEdgeSize as NSNumber,
             ] as CFDictionary
