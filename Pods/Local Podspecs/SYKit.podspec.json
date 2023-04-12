@@ -1,10 +1,10 @@
 {
   "name": "SYKit",
   "platforms": {
-    "ios": "8.0",
+    "ios": "9.0",
     "tvos": "9.0"
   },
-  "version": "0.1.20",
+  "version": "0.1.21",
   "license": "Custom",
   "summary": "UIKit and Foundation tools",
   "homepage": "https://github.com/dvkch/SYKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/dvkch/SYKit.git",
-    "tag": "0.1.20"
+    "tag": "0.1.21"
   },
   "swift_versions": "5.0",
   "source_files": "SYKit/**/*.{h,m,c,swift}",
