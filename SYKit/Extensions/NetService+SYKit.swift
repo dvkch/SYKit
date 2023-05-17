@@ -8,10 +8,17 @@
 
 import Foundation
 
-public class NetAddress {
-    public enum Family {
+public struct NetAddress: CustomDebugStringConvertible, Equatable, Hashable {
+    public enum Family: CustomDebugStringConvertible {
         case ip4
         case ip6
+        
+        public var debugDescription: String {
+            switch self {
+            case .ip4: return "IPv4"
+            case .ip6: return "IPv6"
+            }
+        }
     }
     
     public let family: Family
@@ -26,6 +33,10 @@ public class NetAddress {
         self.port = port
         self.host = host
         self.serv = serv
+    }
+    
+    public var debugDescription: String {
+        return "NetAddress: family=\(family), ip=\(ip), port=\(port), host=\(host), serv=\(serv)"
     }
 }
 
