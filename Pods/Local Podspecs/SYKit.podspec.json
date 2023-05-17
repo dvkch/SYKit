@@ -1,10 +1,10 @@
 {
   "name": "SYKit",
   "platforms": {
-    "ios": "9.0",
-    "tvos": "9.0"
+    "ios": "11.1",
+    "tvos": "11.1"
   },
-  "version": "0.1.21",
+  "version": "0.2.0",
   "license": "Custom",
   "summary": "UIKit and Foundation tools",
   "homepage": "https://github.com/dvkch/SYKit",
@@ -13,13 +13,13 @@
   },
   "source": {
     "git": "https://github.com/dvkch/SYKit.git",
-    "tag": "0.1.21"
+    "tag": "0.2.0"
   },
-  "swift_versions": "5.0",
+  "swift_versions": "5.5",
   "source_files": "SYKit/**/*.{h,m,c,swift}",
   "requires_arc": true,
   "xcconfig": {
     "CLANG_MODULES_AUTOLINK": "YES"
   },
-  "swift_version": "5.0"
+  "swift_version": "5.5"
 }

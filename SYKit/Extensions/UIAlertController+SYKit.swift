@@ -8,9 +8,7 @@
 
 import UIKit
 
-@available(iOS 8.0, tvOS 9.0, *)
 extension UIAlertController {
-    
     @discardableResult
     @objc(sy_addActionWithTitle:image:style:handler:)
     public func addAction(title: String?, image: UIImage? = nil, style: UIAlertAction.Style, handler: ((UIAlertAction) -> ())?) -> UIAlertAction {
@@ -43,7 +41,6 @@ extension UIAlertController {
     }
 }
 
-@available(iOS 8.0, tvOS 9.0, *)
 extension UIAlertAction {
     @objc(sy_updateTitle:)
     public func updateTitle(_ title: String) {

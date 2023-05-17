@@ -15,7 +15,7 @@
 {
     // make sure the filter works
     UIImage *image = [[UIImage alloc] sy_imageWithColor:UIColor.redColor];
-    return [image sy_applyingGreyscaleFilter:UIImageGreyscaleFilterNoir];
+    return [image sy_applyingGreyscaleFilter:CIImageGreyscaleFilterNoir];
 }
 
 + (BOOL)testFindSubviewByType
