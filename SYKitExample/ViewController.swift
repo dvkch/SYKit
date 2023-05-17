@@ -43,12 +43,7 @@ class ViewController: UIViewController {
         print("Image size:", image?.size ?? .zero)
         
         print("Find subview ObjC test:", ObjectiveCTest.testFindSubviewByType() ? "passed" : "failed")
-        
-        print(UIDevice.current.model, UIDevice.current.localizedModel)
-        print("Swift:", UIDevice.current.modelEnum?.rawValue ?? "", UIDevice.current.hardwareString)
-        
-        ObjectiveCTest.testObjCExclusivesBridgings()
-        
+                
         // test boxing
         let attrString = NSAttributedString(string: "TEST STRING", font: UIFont.boldSystemFont(ofSize: 19), color: .red)
         let data = try! PropertyListEncoder().encode(SYArchiverBox(attrString))

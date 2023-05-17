@@ -12,6 +12,5 @@
 
 + (UIImage *)testNoirFilter;
 + (BOOL)testFindSubviewByType;
-+ (void)testObjCExclusivesBridgings;
 
 @end

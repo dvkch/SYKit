@@ -35,11 +35,4 @@
     return foundUIImageView_base == nil && foundUIImageView_recursive != nil;
 }
 
-+ (void)testObjCExclusivesBridgings
-{
-    // make sure those classes are available in ObjC. similar test in ViewController.swift to make sure they are not available in Swift
-    SYDevice *device = [[SYDevice alloc] initWithModel:UIDevice.currentDevice.sy_modelEnum];
-    NSLog(@"ObjC: %ld, %@", UIDevice.currentDevice.sy_modelEnum, device.hardwareStrings);
-}
-
 @end

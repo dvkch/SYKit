@@ -10,16 +10,16 @@ import Foundation
 
 public extension NetService {
     class Address {
-        enum Kind {
+        public enum Kind {
             case ip4
             case ip6
         }
         
-        let kind: Kind
-        let ip: String
-        let port: Int
+        public let kind: Kind
+        public let ip: String
+        public let port: Int
         
-        init(kind: Kind, ip: String, port: Int) {
+        public init(kind: Kind, ip: String, port: Int) {
             self.kind = kind
             self.ip = ip
             self.port = port
