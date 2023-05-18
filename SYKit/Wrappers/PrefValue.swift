@@ -22,6 +22,10 @@ public class PrefValue<T: Codable>: NSObject {
         super.init()
 
         if let ubiquitous {
+            // https://stackoverflow.com/a/13476127/1439489
+            ubiquitous.set(Int.random(in: 0..<100), forKey: "random_key_to_start_syncing")
+            ubiquitous.synchronize()
+
             NotificationCenter.default.addObserver(
                 self, selector: #selector(self.ubiquitousStoreChanged(notification:)),
                 name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: ubiquitous
