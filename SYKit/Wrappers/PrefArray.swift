@@ -35,6 +35,8 @@ public class PrefArray<T: Codable & Identifiable<String>, V: Comparable>: NSObje
                 name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: ubiquitous
             )
         }
+        
+        contentChanged(notifiy: false)
     }
 
     // MARK: Configuration
@@ -52,10 +54,12 @@ public class PrefArray<T: Codable & Identifiable<String>, V: Comparable>: NSObje
     // MARK: Content
     public private(set) var wrappedValue: [T] = []
     
-    private func contentChanged() {
+    private func contentChanged(notifiy: Bool = true) {
         self.wrappedValue = storedElements()
         ubiquitous?.synchronize()
-        postNotification()
+        if notifiy {
+            postNotification()
+        }
     }
     
     private func storedElements() -> [T] {
