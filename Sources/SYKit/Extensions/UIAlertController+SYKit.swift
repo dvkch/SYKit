@@ -39,14 +39,6 @@ extension UIAlertController {
         setContentViewController(vc, height: height)
         return vc.imageView
     }
-    
-    public func present(after alert: UIAlertController, in viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
-        alert.dismiss(animated: animated) {
-            self.present(viewControllerToPresent, animated: animated) {
-                completion?()
-            }
-        }
-    }
 }
 
 extension UIAlertAction {
