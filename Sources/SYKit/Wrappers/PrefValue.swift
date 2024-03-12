@@ -22,8 +22,26 @@ public class PrefValue<T: Codable>: NSObject {
         self.local = local
         self.ubiquitous = ubiquitous
         self.notification = notification
+        
+        var initError: Error? = nil
+        if let data = local.data(forKey: key) {
+            do {
+                self.wrappedValue = try JSONDecoder().decode(T.self, from: data)
+            }
+            catch {
+                initError = error
+                self.wrappedValue = defaultValue
+            }
+        }
+        else {
+            self.wrappedValue = defaultValue
+        }
         super.init()
-
+        
+        if let initError {
+            self.log("Couldn't decode value: \(initError)")
+        }
+        
         if let ubiquitous {
             // https://stackoverflow.com/a/13476127/1439489
             ubiquitous.set(Int.random(in: 0..<100), forKey: "random_key_to_start_syncing")
@@ -45,19 +63,9 @@ public class PrefValue<T: Codable>: NSObject {
     
     // MARK: Properties
     public var wrappedValue: T {
-        get {
-            guard let data = local.data(forKey: key) else { return defaultValue }
+        didSet {
             do {
-                return try JSONDecoder().decode(T.self, from: data)
-            }
-            catch {
-                log("Couldn't decode value: \(error)")
-                return defaultValue
-            }
-        }
-        set {
-            do {
-                let data = try JSONEncoder().encode(newValue)
+                let data = try JSONEncoder().encode(wrappedValue)
                 local.set(data, forKey: key)
                 ubiquitous?.set(data, forKey: key)
                 ubiquitous?.synchronize()
