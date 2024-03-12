@@ -39,6 +39,14 @@ extension UIAlertController {
         setContentViewController(vc, height: height)
         return vc.imageView
     }
+    
+    public func present(after alert: UIAlertController, in viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)? = nil) {
+        alert.dismiss(animated: animated) {
+            self.present(viewControllerToPresent, animated: animated) {
+                completion?()
+            }
+        }
+    }
 }
 
 extension UIAlertAction {
@@ -114,7 +122,7 @@ public class HUDAlertController: UIAlertController {
     }
     
     public static func dismiss(_ hud: HUDAlertController?, animated: Bool = true, completion: (() -> ())? = nil) {
-        if let hud = hud {
+        if let hud {
             hud.dismiss(animated: animated, completion: completion)
         }
         else {
@@ -125,20 +133,24 @@ public class HUDAlertController: UIAlertController {
     // MARK: Init
     public override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.addSubview(loader)
-        loader.startAnimating()
-        loader.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            loader.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loader.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
+        view.addSubview(stackView)
+        updateContent()
     }
 
     // MARK: Properties
     let preferredSize = CGSize(width: 100, height: 100)
+    public var progress: Float? {
+        didSet {
+            updateContent()
+        }
+    }
     
     // MARK: Views
+    private var contentView: UIView {
+        return view.subviews.first!
+    }
+    private let stackView = UIStackView()
+
     private lazy var loader: UIActivityIndicatorView = {
         let loader: UIActivityIndicatorView
         if #available(iOS 13.0, tvOS 13.0, *) {
@@ -150,8 +162,24 @@ public class HUDAlertController: UIAlertController {
         }
         return loader
     }()
-    private var contentView: UIView {
-        return view.subviews.first!
+    private lazy var progressView = UIProgressView()
+    
+    // MARK: Content
+    private func updateContent() {
+        if let progress {
+            if progressView.superview == nil {
+                stackView.subviews.forEach { $0.removeFromSuperview() }
+                stackView.addArrangedSubview(progressView)
+            }
+            progressView.progress = progress
+        }
+        else {
+            if loader.superview == nil {
+                stackView.subviews.forEach { $0.removeFromSuperview() }
+                stackView.addArrangedSubview(loader)
+            }
+            loader.startAnimating()
+        }
     }
 
     // MARK: Layout
