@@ -7,7 +7,7 @@
 //
 
 #import "ObjectiveCTest.h"
-#import <SYKit/SYKit-Swift.h>
+@import SYKit;
 
 @implementation ObjectiveCTest
 
