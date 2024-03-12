@@ -6,6 +6,7 @@
 //  Copyright © 2019 Syan. All rights reserved.
 //
 
+#if os(iOS) || os(tvOS)
 import AVFoundation
 import UIKit
 
@@ -73,3 +74,4 @@ public extension AVAsset {
         }
     }
 }
+#endif

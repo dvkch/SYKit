@@ -7,15 +7,15 @@ let package = Package(
     name: "SYKit",
     platforms: [
         .iOS(.v12),
-        .macOS(.v10_13),
         .tvOS(.v12)
     ],
     products: [
-        .library(name: "SYKit", targets: ["SYKit"]),
+        .library(name: "SYKit", targets: ["SYKit", "SYKitC"]),
     ],
     targets: [
         .target(name: "SYKit"),
-        .testTarget(name: "SYKitTests", dependencies: ["SYKit"]),
+        .target(name: "SYKitC", swiftSettings: [.interoperabilityMode(.C)]),
+        .testTarget(name: "SYKitTests", dependencies: ["SYKit", "SYKitC"]),
     ],
     swiftLanguageVersions: [
         .v5

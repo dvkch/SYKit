@@ -6,7 +6,7 @@
 //  Copyright © 2018 Syan. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public extension Error {
     func isNSError(domain: String, code: Int) -> Bool {

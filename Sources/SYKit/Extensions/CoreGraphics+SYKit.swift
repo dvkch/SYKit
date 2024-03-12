@@ -7,7 +7,9 @@
 //
 
 import CoreGraphics
+#if os(iOS) || os(tvOS)
 import UIKit
+#endif
 
 public extension UIEdgeInsets {
     init(value: CGFloat) {
@@ -63,6 +65,30 @@ public extension CGRect {
                       width:  size.width  * spanX,
                       height: size.height * spanY)
     }
+    
+    init(size: CGSize, centeredInsideRect inside: CGRect, fromOutside: Bool) {
+        self.init(
+            x: (inside.width  - size.width ) / 2 + (fromOutside ? inside.minX : 0),
+            y: (inside.height - size.height) / 2 + (fromOutside ? inside.minY : 0),
+            width: size.width,
+            height: size.height)
+    }
+
+    init(squarreOfSize size: CGFloat, centeredInsideRect inside: CGRect, fromOutside: Bool) {
+        self.init(size: CGSize(width: size, height: size), centeredInsideRect: inside, fromOutside: fromOutside)
+    }
+    
+    #if os(iOS) || os(tvOS)
+    func inset(percentX: CGFloat, percentY: CGFloat) {
+        let insets = UIEdgeInsets(
+            top: percentY * height,
+            left: percentX * width,
+            bottom: percentY * height,
+            right: percentX * width
+        )
+        self.inset(by: insets)
+    }
+    #endif
 }
 
 public enum CGRectSide {
