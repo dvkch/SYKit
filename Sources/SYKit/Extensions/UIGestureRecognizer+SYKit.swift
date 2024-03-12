@@ -6,7 +6,7 @@
 //  Copyright © 2019 Syan. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 public extension UIGestureRecognizer {
     // https://stackoverflow.com/a/4167471/1439489
