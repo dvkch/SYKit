@@ -16,7 +16,7 @@
     "tag": "0.2.14"
   },
   "swift_versions": "5.5",
-  "source_files": "SYKit/**/*.{h,m,c,swift}",
+  "source_files": "Sources/SYKit/**/*.{h,m,c,swift}",
   "requires_arc": true,
   "xcconfig": {
     "CLANG_MODULES_AUTOLINK": "YES"
