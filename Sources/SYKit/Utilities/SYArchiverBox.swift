@@ -19,32 +19,15 @@ public struct SYArchiverBox<T: NSObject & NSCoding>: Codable {
         let container = try decoder.singleValueContainer()
         let data = try container.decode(Data.self)
         
-        if #available(iOS 13.1, tvOS 13.1, *) {
-            guard let objectValue = try NSKeyedUnarchiver.unarchivedObject(ofClass: T.self, from: data) else {
-                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Couldn't unarchive object")
-            }
-            self.value = objectValue
+        guard let objectValue = try NSKeyedUnarchiver.unarchivedObject(ofClass: T.self, from: data) else {
+            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Couldn't unarchive object")
         }
-        else {
-            guard let objectValue = NSKeyedUnarchiver.unarchiveObject(with: data) else {
-                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Couldn't unarchive object")
-            }
-            guard let castedValue = objectValue as? T else {
-                throw DecodingError.dataCorruptedError(in: container, debugDescription: "Couldn't cast object to type \(T.self)")
-            }
-            self.value = castedValue
-        }
+        self.value = objectValue
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        let data: Data
-        if #available(iOS 13.1, tvOS 13.1, *) {
-            data = try NSKeyedArchiver.archivedData(withRootObject: value, requiringSecureCoding: false)
-        }
-        else {
-            data = NSKeyedArchiver.archivedData(withRootObject: value)
-        }
+        let data = try NSKeyedArchiver.archivedData(withRootObject: value, requiringSecureCoding: false)
         try container.encode(data)
     }
 }
