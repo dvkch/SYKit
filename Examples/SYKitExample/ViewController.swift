@@ -31,6 +31,30 @@ class ViewController: UIViewController {
         runTests()
         swiftCompilationTest()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let hud = HUDAlertController.show(in: self)
+        hud.progress = nil
+        
+        test(hud, 0)
+    }
+    
+    private func test(_ hud: HUDAlertController, _ progress: Float) {
+        if progress > 1 {
+            hud.progress = nil
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.test(hud, 0)
+            }
+            return
+        }
+
+        hud.progress = progress
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            self.test(hud, progress + 0.05)
+        }
+    }
 
     // MARK: Properties
     @IBOutlet private var scrollView: UIScrollView!

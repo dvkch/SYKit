@@ -125,15 +125,31 @@ public class HUDAlertController: UIAlertController {
     // MARK: Init
     public override func viewDidLoad() {
         super.viewDidLoad()
+
+        stackView.alignment = .center
         view.addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor).isActive = true
+        stackView.leftAnchor.constraint(equalTo: view.layoutMarginsGuide.leftAnchor).isActive = true
+        stackView.rightAnchor.constraint(equalTo: view.layoutMarginsGuide.rightAnchor).isActive = true
+        let bottomConstraint = stackView.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
+        bottomConstraint.priority = .defaultHigh
+        bottomConstraint.isActive = true
+
         updateContent()
     }
 
     // MARK: Properties
-    let preferredSize = CGSize(width: 100, height: 100)
+    private var preferredSize: CGSize {
+        if progress == nil {
+            return CGSize(width: 100, height: 100)
+        }
+        return CGSize(width: 200, height: 50)
+    }
     public var progress: Float? {
         didSet {
             updateContent()
+            view.setNeedsUpdateConstraints()
         }
     }
     
@@ -176,21 +192,17 @@ public class HUDAlertController: UIAlertController {
 
     // MARK: Layout
     public override func updateViewConstraints() {
-        let contentViewWidth = contentView.constraints.constantAttribute(.width).first ?? {
-            // can't modidy a priority once installed on iOS 12-
-            let constraint = contentView.widthAnchor.constraint(equalToConstant: 0)
-            constraint.priority = .defaultLow
-            constraint.isActive = true
-            return constraint
-        }()
+        let contentViewWidth = contentView.constraints.constantAttribute(.width).first ?? contentView.widthAnchor.constraint(equalToConstant: 0)
+        contentViewWidth.priority = .defaultLow
         contentViewWidth.constant = preferredSize.width
+        contentViewWidth.isActive = true
         
         let viewWidth = view.constraints.constantAttribute(.width).first ?? view.widthAnchor.constraint(equalToConstant: 0)
         viewWidth.constant = preferredSize.width
         viewWidth.isActive = true
         
         let viewHeight = view.constraints.constantAttribute(.height).first ?? view.heightAnchor.constraint(equalToConstant: 0)
-        viewHeight.constant = preferredSize.width
+        viewHeight.constant = preferredSize.height
         viewHeight.isActive = true
 
         super.updateViewConstraints()
