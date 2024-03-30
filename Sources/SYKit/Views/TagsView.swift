@@ -77,7 +77,7 @@ open class TagView: UIButton {
     }
 
     // MARK: Properties
-    public var tagObject: Tag? {
+    open var tagObject: Tag? {
         didSet {
             guard tagObject != oldValue else { return }
             setTitle(tagObject?.name, for: .normal)
