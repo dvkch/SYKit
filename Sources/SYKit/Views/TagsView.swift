@@ -74,6 +74,11 @@ open class TagView: UIButton {
         }
 
         titleLabel?.font = .preferredFont(forTextStyle: .footnote)
+        titleLabel?.adjustsFontForContentSizeCategory = true
+
+        if #available(iOS 15.0, *) {
+            subtitleLabel?.adjustsFontForContentSizeCategory = true
+        }
     }
 
     // MARK: Properties
