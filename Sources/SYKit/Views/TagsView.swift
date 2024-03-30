@@ -13,12 +13,12 @@ public protocol TagsViewDelegate: NSObjectProtocol {
 }
 
 public class Tag: Hashable {
-    let id: String
-    let name: String
-    let image: UIImage?
-    let object: Any
+    public let id: String
+    public let name: String
+    public let image: UIImage?
+    public let object: Any
     
-    init(id: String, name: String, image: UIImage? = nil, object: Any) {
+    public init(id: String, name: String, image: UIImage? = nil, object: Any) {
         self.id = id
         self.name = name
         self.image = image
@@ -50,15 +50,28 @@ open class TagView: UIButton {
         contentEdgeInsets = .init(top: 4, left: 8, bottom: 4, right: 8)
 
         layer.cornerRadius = 5
-        layer.borderColor = UIColor.secondaryLabel.cgColor
+        if #available(iOS 13.0, *) {
+            layer.borderColor = UIColor.secondaryLabel.cgColor
+        } else {
+            layer.borderColor = UIColor.darkGray.cgColor
+        }
         layer.borderWidth = 1
         layer.masksToBounds = true
 
         backgroundColor = .clear
-        setBackgroundColor(.secondaryLabel, for: .highlighted)
+        if #available(iOS 13.0, *) {
+            setBackgroundColor(.secondaryLabel, for: .highlighted)
+        } else {
+            setBackgroundColor(.darkGray, for: .highlighted)
+        }
 
-        setTitleColor(UIColor.secondaryLabel, for: .normal)
-        setTitleColor(UIColor.secondarySystemGroupedBackground, for: .highlighted)
+        if #available(iOS 13.0, *) {
+            setTitleColor(UIColor.secondaryLabel, for: .normal)
+            setTitleColor(UIColor.secondarySystemGroupedBackground, for: .highlighted)
+        } else {
+            setTitleColor(UIColor.darkGray, for: .normal)
+            setTitleColor(UIColor.lightGray, for: .highlighted)
+        }
 
         titleLabel?.font = .preferredFont(forTextStyle: .footnote)
     }
