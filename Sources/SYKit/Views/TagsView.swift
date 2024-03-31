@@ -131,8 +131,8 @@ public class TagsView: UIView {
     private var tagViews = [TagView]()
     
     // MARK: Actions
-    @objc private func tagViewPressed(sender: UIButton) {
-        delegate?.tagsView(self, didTapItem: tags[sender.tag], sender: sender)
+    @objc private func tagViewPressed(sender: TagView) {
+        delegate?.tagsView(self, didTapItem: sender.tagObject!, sender: sender)
     }
     
     // MARK: Content
