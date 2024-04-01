@@ -26,6 +26,8 @@ public class PrefArray<T: Codable & Identifiable<String>, V: Comparable>: NSObje
         super.init()
 
         if let ubiquitous {
+            importUbiquitousElements()
+
             // https://stackoverflow.com/a/13476127/1439489
             ubiquitous.set(Int.random(in: 0..<100), forKey: "random_key_to_start_syncing")
             ubiquitous.synchronize()
@@ -149,9 +151,32 @@ public class PrefArray<T: Codable & Identifiable<String>, V: Comparable>: NSObje
             NotificationCenter.default.post(name: notification, object: nil)
         }
     }
+    
+    private func importUbiquitousElements() {
+        guard let ubiquitous else { return }
+        let keys = ubiquitous.dictionaryRepresentation.keys.filter { $0.hasPrefix(prefix) }
+        keys.forEach { importUbiquitousElement(key: $0) }
+    }
+    
+    private func importUbiquitousElement(key: String) {
+        guard let ubiquitous else { return }
+
+        let value = ubiquitous.object(forKey: key)
+        if let data = value as? Data {
+            // added / updated
+            local.setValue(data, forKey: key)
+        }
+        else if let value {
+            // added / updated, but unknown type
+            log("Received new synced value for key \(key), but it is not a Data type: \(type(of: value))")
+        }
+        else {
+            // deleted
+            local.removeObject(forKey: key)
+        }
+    }
 
     @objc private func ubiquitousStoreChanged(notification: Notification) {
-        guard let ubiquitous else { return }
         guard let reason = notification.userInfo?[NSUbiquitousKeyValueStoreChangeReasonKey] as? Int else { return }
 
         switch reason {
@@ -165,21 +190,7 @@ public class PrefArray<T: Codable & Identifiable<String>, V: Comparable>: NSObje
             guard let keys = notification.userInfo?[NSUbiquitousKeyValueStoreChangedKeysKey] as? [String] else { return }
 
             let impactedKeys = keys.filter { $0.hasPrefix(prefix) }
-            impactedKeys.forEach { key in
-                let value = ubiquitous.object(forKey: key)
-                if let data = value as? Data {
-                    // added / updated
-                    local.setValue(data, forKey: key)
-                }
-                else if let value {
-                    // added / updated, but unknown type
-                    log("Received new synced value for key \(key), but it is not a Data type: \(type(of: value))")
-                }
-                else {
-                    // deleted
-                    local.removeObject(forKey: key)
-                }
-            }
+            impactedKeys.forEach { key in importUbiquitousElement(key: key) }
             contentChanged()
             
         default:
