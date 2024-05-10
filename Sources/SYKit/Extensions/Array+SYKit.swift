@@ -28,6 +28,13 @@ public extension Array where Element : Equatable {
     }
 }
 
+@available(iOS 13.0, *)
+public extension Collection where Element: Identifiable {
+    func find(id: Element.ID) -> Element? {
+        return first(where: { $0.id == id })
+    }
+}
+
 public extension Collection {
     var isNotEmpty: Bool {
         return !isEmpty
@@ -64,10 +71,17 @@ public extension Collection {
 }
 
 public extension Sequence {
-    func sorted<V: Comparable>(by path: KeyPath<Element, V>) -> [Self.Element] {
+    func sorted<V: Comparable>(by path: KeyPath<Element, V>, ascending: Bool = true) -> [Self.Element] {
         return self.sorted { e1, e2 in
-            return e1[keyPath: path] < e2[keyPath: path]
+            return (e1[keyPath: path] < e2[keyPath: path]) == ascending
         }
     }
 }
 
+public extension MutableCollection where Self : RandomAccessCollection {
+    mutating func sort<V: Comparable>(by path: KeyPath<Element, V>, ascending: Bool = true) {
+        self.sort { e1, e2 in
+            return (e1[keyPath: path] < e2[keyPath: path]) == ascending
+        }
+    }
+}
