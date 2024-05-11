@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol OptionalType {
+public protocol OptionalType<Wrapped> {
     associatedtype Wrapped
     func map<U>(_ f: (Wrapped) throws -> U) rethrows -> U?
     var value: Wrapped? { get }
